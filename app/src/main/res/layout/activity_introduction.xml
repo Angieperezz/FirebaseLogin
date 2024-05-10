@@ -1,44 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark"
+    android:orientation="vertical"
+    android:background="@color/primary"
     tools:context=".ui.introduction.IntroductionActivity">
+
+    <ImageView
+        android:id="@+id/nameApp"
+        android:layout_width="82.73dp"
+        android:layout_height="25.95dp"
+        android:src="@drawable/binkio_letter"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="50dp"/>
 
     <include
         android:id="@+id/viewHeader"
         layout="@layout/view_header"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="35dp"
+         />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        style="@style/CaptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="41dp"
+        android:paddingHorizontal="50dp"
+        android:text="@string/txtMain" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView2"
+        style="@style/CaptionText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:paddingHorizontal="50dp"
+        android:text="@string/txtMain2" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
         style="@style/PrimaryButton"
-        android:layout_width="0dp"
-        android:layout_height="44dp"
-        android:layout_marginHorizontal="16dp"
+        android:layout_width="235dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         android:text="@string/login_button_loggin"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnSingIn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginBottom="16dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSingIn"
         style="@style/SecondaryButton"
-        android:layout_width="0dp"
-        android:layout_height="44dp"
-        android:layout_marginHorizontal="16dp"
-        android:text="@string/introduction_button_signin"
+        android:layout_width="235dp"
+        android:layout_height="54dp"
+        android:layout_gravity="center"
         android:layout_marginBottom="152dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="@string/introduction_button_signin" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

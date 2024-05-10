@@ -1,10 +1,10 @@
 <resources>
 
-    <style name="Theme.Nuwe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Nuwe" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryVariant">@color/primary_dark</item>
-        <item name="colorOnPrimary">@color/primary_light</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
+        <item name="colorOnPrimary">@color/primary</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/secondary</item>
         <item name="colorSecondaryVariant">@color/secondary_dark</item>
@@ -14,14 +14,21 @@
     </style>
 
     <style name="SplashTheme" parent="Theme.Nuwe">
-        <item name="android:windowBackground">@drawable/view_background</item>
+        <item name="android:windowBackground">@drawable/logo_binkio</item>
     </style>
 
     <style name="CaptionText" parent="Widget.AppCompat.TextView">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/secondary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:gravity">center</item>
-        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="CaptionText2" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
     </style>
 
     <style name="BodyText" parent="Widget.AppCompat.TextView">
@@ -46,17 +53,17 @@
         <item name="android:insetBottom">0dp</item>
         <item name="android:textColor">@color/secondary</item>
         <item name="android:gravity">center</item>
-        <item name="backgroundTint">@color/primary</item>
+        <item name="backgroundTint">@color/colorPrimaryButton</item>
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
 
     <style name="SecondaryButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="strokeColor">@color/primary</item>
+        <item name="strokeColor">@color/black</item>
         <item name="android:textSize">12sp</item>
         <item name="textAllCaps">true</item>
         <item name="android:insetTop">0dp</item>
         <item name="android:insetBottom">0dp</item>
-        <item name="android:textColor">@color/primary</item>
+        <item name="android:textColor">@color/colorPrimaryButton</item>
         <item name="android:gravity">center</item>
         <item name="android:fontFamily">@font/montserrat</item>
     </style>

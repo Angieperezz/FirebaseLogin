@@ -1,6 +1,11 @@
 package com.aristidevs.nuwelogin.ui.introduction
 
+import android.graphics.Color
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
+import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -10,6 +15,7 @@ import com.aristidevs.nuwelogin.ui.login.LoginActivity
 import com.aristidevs.nuwelogin.ui.signin.SignInActivity
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
 class IntroductionActivity : AppCompatActivity() {
 
@@ -18,9 +24,29 @@ class IntroductionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_Nuwe)
+        setTheme(com.aristidevs.nuwelogin.R.style.Theme_Nuwe)
         super.onCreate(savedInstanceState)
         binding = ActivityIntroductionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val texto = "Compra activos tokenizados desde \n cualquier parte del mundo"
+
+        val spannableString = SpannableString(texto)
+        spannableString.setSpan(
+            ForegroundColorSpan(Color.BLACK),
+            0,
+            31,
+            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+        spannableString.setSpan(
+            ForegroundColorSpan(Color.BLUE),
+            32,
+            texto.length,
+            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+
+        val textView = findViewById<TextView>(com.aristidevs.nuwelogin.R.id.appCompatTextView)
+        textView.text = spannableString
         initUI()
     }
 

@@ -15,7 +15,7 @@
     <string name="login_error_dialog_negative_action">Cancelar</string>
     <string name="login_error_dialog_positive_action">Reintentar</string>
     <string name="txtMain">Compra activos tokenizados desde cualquier parte del mundo.</string>
-    <string name="txtMain2">\"Controla tus bienes digitales de forma flexible y segura\"</string>
+    <string name="txtMain2">\"Controla tus bienes digitales de forma \n flexible y segura\"</string>
 
     <string name="introduction_button_signin">Registrate</string>
 

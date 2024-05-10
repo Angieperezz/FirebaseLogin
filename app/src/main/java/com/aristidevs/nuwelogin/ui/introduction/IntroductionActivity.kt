@@ -65,11 +65,10 @@ class IntroductionActivity : AppCompatActivity() {
         }
 
         val demoData = arrayListOf(
-            "img1",
-            "img2",
-            "img3",
-            "img4",
-            "img5"
+            R.drawable.image1,
+            R.drawable.image2,
+            R.drawable.image3,
+            // Agrega más IDs de imágenes según sea necesario
         )
 
         viewPager.adapter = CarouselRVAdapter(demoData)

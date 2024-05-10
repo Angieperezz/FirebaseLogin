@@ -3,11 +3,12 @@ package com.aristidevs.nuwelogin.domain
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.aristidevs.nuwelogin.R
 
-class CarouselRVAdapter(private val carouselDataList: ArrayList<String>) :
+class CarouselRVAdapter(private val carouselDataList: ArrayList<Int>) :
     RecyclerView.Adapter<CarouselRVAdapter.CarouselItemViewHolder>() {
 
     class CarouselItemViewHolder(view: View) : RecyclerView.ViewHolder(view)
@@ -18,8 +19,8 @@ class CarouselRVAdapter(private val carouselDataList: ArrayList<String>) :
     }
 
     override fun onBindViewHolder(holder: CarouselItemViewHolder, position: Int) {
-        val textView = holder.itemView.findViewById<TextView>(R.id.textview)
-        textView.text = carouselDataList[position]
+        val imageView = holder.itemView.findViewById<ImageView>(R.id.imageview)
+        imageView.setImageResource(carouselDataList[position])
     }
 
     override fun getItemCount(): Int {

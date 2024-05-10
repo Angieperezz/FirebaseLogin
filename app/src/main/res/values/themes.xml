@@ -14,7 +14,7 @@
     </style>
 
     <style name="SplashTheme" parent="Theme.Nuwe">
-        <item name="android:windowBackground">@drawable/logo_binkio</item>
+        <item name="android:windowBackground">@drawable/splash_image</item>
     </style>
 
     <style name="CaptionText" parent="Widget.AppCompat.TextView">

@@ -36,7 +36,7 @@ class IntroductionActivity : AppCompatActivity() {
         binding = ActivityIntroductionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val texto = "Compra activos tokenizados desde \n cualquier parte del mundo"
+        val texto = "Compra activos tokenizados desde cualquier parte del mundo"
         val viewPager = findViewById<ViewPager2>(R.id.view_pager)
 
         val spannableString = SpannableString(texto)

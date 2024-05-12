@@ -8,7 +8,7 @@
         android:id="@+id/ivLogo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/image1"
+        app:srcCompat="@drawable/binkio_letter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

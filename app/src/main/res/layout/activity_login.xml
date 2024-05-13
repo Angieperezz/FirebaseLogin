@@ -26,7 +26,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="28dp"
         android:textAlignment="center"
         android:textSize="24sp"
         android:text="@string/signin_footer_selected"
@@ -37,16 +37,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewHeader"/>
 
+    <TextView
+        android:id="@+id/titleEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="11sp"
+        android:text="@string/signin_form_email"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/tilEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"/>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmail"
         android:layout_width="0dp"
-        android:hint="@string/login_hint_user"
         style="@style/FormTextInputLayout"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/tilPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title">
+        app:layout_constraintTop_toBottomOf="@+id/titleEmail">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
@@ -59,13 +72,35 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/titlePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:text="@string/login_hint_password"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/tilEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnForgotPassword"
+        style="@style/SecondaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        app:layout_constraintBottom_toBottomOf="@+id/titlePassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titlePassword" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         style="@style/FormTextInputLayout"
-        android:hint="@string/login_hint_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilEmail" >
@@ -82,17 +117,6 @@
             android:textColorHint="@color/error_dark" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnForgotPassword"
-        style="@style/SecondaryButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/forgot_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tilPassword" />
 
 <!--    <com.google.android.material.button.MaterialButton-->
 <!--        android:id="@+id/btnSingIn"-->
@@ -111,7 +135,7 @@
         android:layout_height="44dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="42dp"
-        android:text="Inicia sesión"
+        android:text="@string/signin_footer_selected"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilPassword" />

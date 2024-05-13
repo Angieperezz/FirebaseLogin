@@ -24,6 +24,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmail"
         android:layout_width="0dp"
+        android:hint="@string/login_hint_user"
         style="@style/FormTextInputLayout"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -34,10 +35,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
-            style="@style/FormEditText"
+            style="@style/FormEditTextWithBorder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/login_hint_user"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress" />
 
@@ -49,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         style="@style/FormTextInputLayout"
+        android:hint="@string/login_hint_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilEmail" >
@@ -58,7 +59,6 @@
             style="@style/FormEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/login_hint_password"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:textColorHighlight="@color/error_dark"
@@ -99,7 +99,8 @@
         app:icon="@drawable/ic_google"
         app:iconGravity="textStart"
         app:iconSize="24dp"
-        app:iconPadding="4dp"
+        app:iconTint="@null"
+        app:iconPadding="10dp"
         android:text="Accede con Google"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

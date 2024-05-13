@@ -1,6 +1,5 @@
 package com.aristidevs.nuwelogin.ui.introduction
 
-import android.content.res.Resources
 import android.graphics.Color
 import android.os.Bundle
 import android.text.SpannableString
@@ -12,16 +11,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.CompositePageTransformer
-import androidx.viewpager2.widget.MarginPageTransformer
 import com.aristidevs.nuwelogin.R
 import com.aristidevs.nuwelogin.databinding.ActivityIntroductionBinding
 import com.aristidevs.nuwelogin.domain.CarouselCardAdapter
 import com.aristidevs.nuwelogin.ui.login.LoginActivity
 import com.aristidevs.nuwelogin.ui.signin.SignInActivity
 import dagger.hilt.android.AndroidEntryPoint
-import androidx.viewpager2.widget.ViewPager2
-import kotlin.math.abs
 
 
 @AndroidEntryPoint
@@ -59,7 +54,6 @@ class IntroductionActivity : AppCompatActivity() {
             R.drawable.image1,
             R.drawable.image2,
             R.drawable.image3,
-            // Agrega más IDs de imágenes según sea necesario
         )
 
         val marginDp = 16

@@ -51,6 +51,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
             style="@style/FormEditTextWithBorder"
+            android:background="@drawable/border_background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:imeOptions="actionNext"
@@ -72,6 +73,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
             style="@style/FormEditText"
+            android:background="@drawable/border_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"

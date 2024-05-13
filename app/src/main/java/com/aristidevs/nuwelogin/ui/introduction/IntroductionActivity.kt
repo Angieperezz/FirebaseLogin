@@ -10,13 +10,13 @@ import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import com.aristidevs.nuwelogin.R
 import com.aristidevs.nuwelogin.databinding.ActivityIntroductionBinding
-import com.aristidevs.nuwelogin.domain.CarouselRVAdapter
+import com.aristidevs.nuwelogin.domain.CarouselCardAdapter
 import com.aristidevs.nuwelogin.ui.login.LoginActivity
 import com.aristidevs.nuwelogin.ui.signin.SignInActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,8 +37,6 @@ class IntroductionActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val texto = "Compra activos tokenizados desde cualquier parte del mundo"
-        val viewPager = findViewById<ViewPager2>(R.id.view_pager)
-
         val spannableString = SpannableString(texto)
         spannableString.setSpan(
             ForegroundColorSpan(Color.BLACK),
@@ -53,16 +51,9 @@ class IntroductionActivity : AppCompatActivity() {
             Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
         )
 
-        val textView = findViewById<TextView>(com.aristidevs.nuwelogin.R.id.appCompatTextView)
+        val textView = findViewById<TextView>(R.id.appCompatTextView)
         textView.text = spannableString
         initUI()
-
-        viewPager.apply{
-            clipChildren = false
-            clipToPadding = false
-            offscreenPageLimit = 3
-            (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
-        }
 
         val demoData = arrayListOf(
             R.drawable.image1,
@@ -71,15 +62,19 @@ class IntroductionActivity : AppCompatActivity() {
             // Agrega más IDs de imágenes según sea necesario
         )
 
-        viewPager.adapter = CarouselRVAdapter(demoData)
+        val marginDp = 16
+        val transformerDecoration = CardViewPageTransformerDecoration(marginDp)
 
-        val compositePageTransformer = CompositePageTransformer()
-        compositePageTransformer.addTransformer(MarginPageTransformer((40 * Resources.getSystem().displayMetrics.density).toInt()))
-        compositePageTransformer.addTransformer { page, position ->
-            val r = 1 - abs(position)
-            page.scaleY = (0.80f + r * 0.20f)
-        }
-        viewPager.setPageTransformer(compositePageTransformer)
+
+        val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
+        recyclerView.layoutManager
+        recyclerView.adapter = CarouselCardAdapter(demoData)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.addItemDecoration(transformerDecoration)
+
+        binding.roundedCardView.clipChildren = false
+        binding.roundedCardView.clipToPadding = false
+
     }
 
     private fun initUI() {

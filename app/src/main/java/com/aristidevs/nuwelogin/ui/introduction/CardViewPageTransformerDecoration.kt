@@ -6,9 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CardViewPageTransformerDecoration(private val marginPx: Int) : RecyclerView.ItemDecoration() {
 
-    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
-        super.getItemOffsets(outRect, view, parent, state)
-        outRect.left = marginPx
-        outRect.right = marginPx
-    }
+//    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+//        super.getItemOffsets(outRect, view, parent, state)
+//        outRect.left = marginPx
+//        outRect.right = marginPx
+//    }
 }

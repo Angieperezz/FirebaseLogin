@@ -38,8 +38,8 @@
     <string name="verification_button_go_to_nuwe">Vamos a Binkio</string>
     <string name="verification_check_mail">Revisa tu correo electrónico para recuperar tu contraseña (recuerda mirar en SPAM).</string>
 
-    <string name="dialog_success_title">¡Demo completa!</string>
-    <string name="dialog_success_body">"Espero que te haya gustado este login usando buenas prácticas y buen rollo :) "</string>
+    <string name="dialog_success_title">¡Login completo!</string>
+    <string name="dialog_success_body">"Muy pronto al darle click a este boton ira al siguiente modulo de la app :) "</string>
     <string name="dialog_success_positive">¡Gracias!</string>
 
     <string name="feature_not_allowed">Feature no solicitada :)</string>

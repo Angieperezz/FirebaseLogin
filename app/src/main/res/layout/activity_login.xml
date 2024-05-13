@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark"
+    android:background="@color/primary"
     tools:context=".ui.login.LoginActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -26,7 +26,7 @@
         android:layout_width="0dp"
         style="@style/FormTextInputLayout"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toTopOf="@+id/tilPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +75,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/login_sign_in"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
+        app:layout_constraintTop_toTopOf="@+id/tilPassword" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
@@ -83,11 +83,27 @@
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/login_button_loggin"
+        android:layout_marginTop="62dp"
+        android:text="Inicia sesión"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLoginGoogle"
+        style="@style/googleButton"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        app:icon="@drawable/ic_google"
+        app:iconGravity="textStart"
+        app:iconSize="24dp"
+        app:iconPadding="4dp"
+        android:text="Accede con Google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <ProgressBar
         android:id="@+id/pbLoading"
@@ -98,13 +114,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <include
-        android:id="@+id/viewBottom"
-        layout="@layout/view_bottom"
-        android:layout_width="0dp"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCreateAccount"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="46dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginGoogle"
+        android:text="@string/login_footer_unselected"
+      />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSingIn"
+        style="@style/SecondaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Registrate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreateAccount" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

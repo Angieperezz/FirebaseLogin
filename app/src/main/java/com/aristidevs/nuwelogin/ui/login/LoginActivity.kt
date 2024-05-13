@@ -47,10 +47,7 @@ class LoginActivity : AppCompatActivity() {
     private fun initUI() {
         initListeners()
         initObservers()
-        binding.viewBottom.tvFooter.text = span(
-            getString(R.string.login_footer_unselected),
-            getString(R.string.login_footer_selected)
-        )
+
     }
 
     private fun initListeners() {
@@ -63,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
 
         binding.tvForgotPassword.setOnClickListener { loginViewModel.onForgotPasswordSelected() }
 
-        binding.viewBottom.tvFooter.setOnClickListener { loginViewModel.onSignInSelected() }
+        binding.btnSingIn.setOnClickListener { loginViewModel.onSignInSelected() }
 
         binding.btnLogin.setOnClickListener {
             it.dismissKeyboard()

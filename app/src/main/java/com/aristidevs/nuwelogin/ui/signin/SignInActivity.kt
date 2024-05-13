@@ -44,50 +44,46 @@ class SignInActivity : AppCompatActivity() {
     private fun initUI() {
         initListeners()
         initObservers()
-        binding.viewBottom.tvFooter.text = span(
-            getString(R.string.signin_footer_unselected),
-            getString(R.string.signin_footer_selected)
-        )
     }
 
     private fun initListeners() {
 
-        binding.etEmail.loseFocusAfterAction(EditorInfo.IME_ACTION_NEXT)
-        binding.etEmail.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
-        binding.etEmail.onTextChanged { onFieldChanged() }
+//        binding.etEmail.loseFocusAfterAction(EditorInfo.IME_ACTION_NEXT)
+//        binding.etEmail.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
+//        binding.etEmail.onTextChanged { onFieldChanged() }
+//
+//        binding.etNickname.loseFocusAfterAction(EditorInfo.IME_ACTION_NEXT)
+//        binding.etNickname.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
+//        binding.etNickname.onTextChanged { onFieldChanged() }
+//
+//        binding.etRealName.loseFocusAfterAction(EditorInfo.IME_ACTION_NEXT)
+//        binding.etRealName.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
+//        binding.etRealName.onTextChanged { onFieldChanged() }
+//
+//        binding.etPassword.loseFocusAfterAction(EditorInfo.IME_ACTION_NEXT)
+//        binding.etPassword.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
+//        binding.etPassword.onTextChanged { onFieldChanged() }
+//
+//        binding.etRepeatPassword.loseFocusAfterAction(EditorInfo.IME_ACTION_DONE)
+//        binding.etRepeatPassword.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
+//        binding.etRepeatPassword.onTextChanged { onFieldChanged() }
 
-        binding.etNickname.loseFocusAfterAction(EditorInfo.IME_ACTION_NEXT)
-        binding.etNickname.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
-        binding.etNickname.onTextChanged { onFieldChanged() }
+        binding.btnRegister.setOnClickListener { signInViewModel.onLoginSelected() }
 
-        binding.etRealName.loseFocusAfterAction(EditorInfo.IME_ACTION_NEXT)
-        binding.etRealName.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
-        binding.etRealName.onTextChanged { onFieldChanged() }
-
-        binding.etPassword.loseFocusAfterAction(EditorInfo.IME_ACTION_NEXT)
-        binding.etPassword.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
-        binding.etPassword.onTextChanged { onFieldChanged() }
-
-        binding.etRepeatPassword.loseFocusAfterAction(EditorInfo.IME_ACTION_DONE)
-        binding.etRepeatPassword.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
-        binding.etRepeatPassword.onTextChanged { onFieldChanged() }
-
-        binding.viewBottom.tvFooter.setOnClickListener { signInViewModel.onLoginSelected() }
-
-        with(binding) {
-            btnCreateAccount.setOnClickListener {
-                it.dismissKeyboard()
-                signInViewModel.onSignInSelected(
-                    UserSignIn(
-                        realName = binding.etRealName.text.toString(),
-                        nickName = binding.etNickname.text.toString(),
-                        email = binding.etEmail.text.toString(),
-                        password = binding.etPassword.text.toString(),
-                        passwordConfirmation = binding.etRepeatPassword.text.toString()
-                    )
-                )
-            }
-        }
+//        with(binding) {
+//            btnCreateAccount.setOnClickListener {
+//                it.dismissKeyboard()
+//                signInViewModel.onSignInSelected(
+//                    UserSignIn(
+//                        realName = binding.etRealName.text.toString(),
+//                        nickName = binding.etNickname.text.toString(),
+//                        email = binding.etEmail.text.toString(),
+//                        password = binding.etPassword.text.toString(),
+//                        passwordConfirmation = binding.etRepeatPassword.text.toString()
+//                    )
+//                )
+//            }
+//        }
     }
 
     private fun initObservers() {
@@ -125,33 +121,33 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun updateUI(viewState: SignInViewState) {
-        with(binding) {
-            pbLoading.isVisible = viewState.isLoading
-            binding.tilEmail.error =
-                if (viewState.isValidEmail) null else getString(R.string.signin_error_mail)
-            binding.tilNickname.error =
-                if (viewState.isValidNickName) null else getString(R.string.signin_error_nickname)
-            binding.tilRealName.error =
-                if (viewState.isValidRealName) null else getString(R.string.signin_error_realname)
-            binding.tilPassword.error =
-                if (viewState.isValidPassword) null else getString(R.string.signin_error_password)
-            binding.tilRepeatPassword.error =
-                if (viewState.isValidPassword) null else getString(R.string.signin_error_password)
-        }
+//        with(binding) {
+//            pbLoading.isVisible = viewState.isLoading
+//            binding.tilEmail.error =
+//                if (viewState.isValidEmail) null else getString(R.string.signin_error_mail)
+//            binding.tilNickname.error =
+//                if (viewState.isValidNickName) null else getString(R.string.signin_error_nickname)
+//            binding.tilRealName.error =
+//                if (viewState.isValidRealName) null else getString(R.string.signin_error_realname)
+//            binding.tilPassword.error =
+//                if (viewState.isValidPassword) null else getString(R.string.signin_error_password)
+//            binding.tilRepeatPassword.error =
+//                if (viewState.isValidPassword) null else getString(R.string.signin_error_password)
+//        }
     }
 
     private fun onFieldChanged(hasFocus: Boolean = false) {
-        if (!hasFocus) {
-            signInViewModel.onFieldsChanged(
-                UserSignIn(
-                    realName = binding.etRealName.text.toString(),
-                    nickName = binding.etNickname.text.toString(),
-                    email = binding.etEmail.text.toString(),
-                    password = binding.etPassword.text.toString(),
-                    passwordConfirmation = binding.etRepeatPassword.text.toString()
-                )
-            )
-        }
+//        if (!hasFocus) {
+//            signInViewModel.onFieldsChanged(
+//                UserSignIn(
+//                    realName = binding.etRealName.text.toString(),
+//                    nickName = binding.etNickname.text.toString(),
+//                    email = binding.etEmail.text.toString(),
+//                    password = binding.etPassword.text.toString(),
+//                    passwordConfirmation = binding.etRepeatPassword.text.toString()
+//                )
+//            )
+//        }
     }
 
     private fun goToVerifyEmail() {

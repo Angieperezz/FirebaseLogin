@@ -21,6 +21,7 @@
 
     <color name="warning_dark">#F48B29</color>
     <color name="warning">#F0A500</color>
+    <color name="transparent">#FFFFFF</color>
 
     <color name="divider">#A68B979D</color>
     <color name="outline">#39424E</color>

@@ -20,6 +20,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
         etEmail = findViewById(R.id.etEmail)
 
         val btnSendEmail = findViewById<MaterialButton>(R.id.btnSendEmail)
+        val btnBack = findViewById<MaterialButton>(R.id.btnBack)
         btnSendEmail.setOnClickListener {
             val email = etEmail.text.toString()
             if (validateEmail(email)) {
@@ -28,6 +29,10 @@ class ForgotPasswordActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Email inválido", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        btnBack.setOnClickListener {
+            onBackPressed()
         }
     }
 

@@ -35,8 +35,8 @@
     <string name="signin_error_dialog_body">No hemos podido crear tu cuenta, inténtalo de nuevo más tarde</string>
     <string name="signin_error_dialog_positive_action">Okey :(</string>
 
-    <string name="verification_button_go_to_nuwe">Vamos a nuwe</string>
-    <string name="verification_check_mail">Para acceder a la aplicación verifica tu correo electrónico (recuerda mirar en SPAM).</string>
+    <string name="verification_button_go_to_nuwe">Vamos a Binkio</string>
+    <string name="verification_check_mail">Revisa tu correo electrónico para recuperar tu contraseña (recuerda mirar en SPAM).</string>
 
     <string name="dialog_success_title">¡Demo completa!</string>
     <string name="dialog_success_body">"Espero que te haya gustado este login usando buenas prácticas y buen rollo :) "</string>

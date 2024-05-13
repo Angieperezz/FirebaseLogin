@@ -158,6 +158,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goToVerify() {
-        startActivity(VerificationActivity.create(this))
+        //startActivity(VerificationActivity.create(this))
     }
 }

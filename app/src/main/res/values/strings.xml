@@ -2,7 +2,8 @@
     <string name="app_name">Binkio</string>
 
     <string name="login_subtitle"><![CDATA[Empoyering tech amazing individuals to shine trough hackathons, talks & challenges]]></string>
-    <string name="login_sign_in">Olvidaste tu contraseña</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="reset_password">Ingresa tu correo Electronico. Te estaremos \n enviando un link para cambiar tu contraseña</string>
     <string name="login_button_loggin">Ingresar</string>
     <string name="login_hint_password">Contraseña</string>
     <string name="login_hint_user">Correo electrónico</string>
@@ -43,6 +44,7 @@
 
     <string name="feature_not_allowed">Feature no solicitada :)</string>
     <string name="signin_button_createaccount">Crear mi cuenta</string>
+    <string name="next_btn">Siguiente</string>
     <string name="register_with_google">Registrate con Google</string>
     <string name="login_with_google">Accede con Google</string>
 </resources>

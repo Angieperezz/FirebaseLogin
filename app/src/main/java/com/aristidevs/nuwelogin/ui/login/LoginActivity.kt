@@ -15,6 +15,7 @@ import com.aristidevs.nuwelogin.core.dialog.LoginSuccessDialog
 import com.aristidevs.nuwelogin.core.ex.*
 import com.aristidevs.nuwelogin.databinding.ActivityLoginBinding
 import com.aristidevs.nuwelogin.ui.login.model.UserLogin
+import com.aristidevs.nuwelogin.ui.resetPassword.ForgotPasswordActivity
 import com.aristidevs.nuwelogin.ui.signin.SignInActivity
 import com.aristidevs.nuwelogin.ui.verification.VerificationActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -58,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
         binding.etPassword.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
         binding.etPassword.onTextChanged { onFieldChanged() }
 
-        binding.tvForgotPassword.setOnClickListener { loginViewModel.onForgotPasswordSelected() }
+        binding.btnForgotPassword.setOnClickListener { loginViewModel.onForgotPasswordSelected() }
 
         binding.btnSingIn.setOnClickListener { loginViewModel.onSignInSelected() }
 
@@ -109,7 +110,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun updateUI(viewState: LoginViewState) {
         with(binding) {
-            pbLoading.isVisible = viewState.isLoading
+            //pbLoading.isVisible = viewState.isLoading
             tilEmail.error =
                 if (viewState.isValidEmail) null else getString(R.string.login_error_mail)
             tilPassword.error =
@@ -144,7 +145,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goToForgotPassword() {
-        toast(getString(R.string.feature_not_allowed))
+        val intent = Intent(this, ForgotPasswordActivity::class.java)
+        startActivity(intent)
     }
 
     private fun goToSignIn() {

@@ -24,6 +24,9 @@
             android:name=".ui.login.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ui.resetPassword.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ui.introduction.IntroductionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme"

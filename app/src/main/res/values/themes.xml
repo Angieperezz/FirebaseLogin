@@ -57,6 +57,40 @@
         <item name="android:fontFamily">@font/poppins_regular</item>
     </style>
 
+    <style name="CustomCheckboxStyle" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="android:buttonTint">#007bff</item>
+        <item name="android:thumbTint">#007bff</item>
+        <item name="rippleColor">#007bff</item>
+        <item name="android:shape">@drawable/custom_checkbox_pressed_shap</item>
+    </style>
+
+    <style name="custom_checkbox_shape" parent="android:Widget">
+        <item name="android:shape">ring</item>
+        <item name="android:minWidth">24dp</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:strokeWidth">1</item>
+        <item name="android:strokeColor">#000000</item>
+        <item name="android:background">#ffffff</item> <!-- o cualquier otro color que desees -->
+    </style>
+
+    <style name="custom_checkbox_pressed_shape" parent="android:Widget">
+        <item name="android:shape">ring</item>
+        <item name="android:minWidth">24dp</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:strokeWidth">1</item>
+        <item name="android:strokeColor">#000000</item>
+        <item name="android:background">#007bff</item> <!-- o cualquier otro color que desees -->
+    </style>
+
+    <!-- Asignar los estilos a los estados de checkbox -->
+    <style name="CustomCheckboxStyle.State.Checked" parent="CustomCheckboxStyle">
+        <item name="android:background">@drawable/custom_checkbox_pressed_shap</item>
+    </style>
+
+    <style name="CustomCheckboxStyle.State.CheckedAnimated" parent="CustomCheckboxStyle">
+        <item name="android:background">@drawable/custom_checkbox_pressed_shap</item>
+    </style>
+
     <style name="googleButton" parent="Widget.MaterialComponents.Button">
         <item name="android:textSize">12sp</item>
         <item name="textAllCaps">false</item>

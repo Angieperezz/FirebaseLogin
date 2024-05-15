@@ -52,4 +52,6 @@
     <string name="register_with_google">Registrate con Google</string>
     <string name="login_with_google">Accede con Google</string>
     <string name="remember_me_text">Recuerdame</string>
+    <string name="physic_person">Soy persona física \n Desempeña una actividad económica bajo \n el ejercicio independiente de una profesión</string>
+    <string name="moral_person">Soy persona moral \n Desempeña una actividad económica a \n traves una sociedad comercial(Dueño de empresa)</string>
 </resources>

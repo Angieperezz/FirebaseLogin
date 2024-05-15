@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.inputmethod.EditorInfo
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -14,8 +15,11 @@ import com.aristidevs.nuwelogin.core.dialog.ErrorDialog
 import com.aristidevs.nuwelogin.core.ex.*
 import com.aristidevs.nuwelogin.databinding.ActivitySignInBinding
 import com.aristidevs.nuwelogin.ui.login.LoginActivity
+import com.aristidevs.nuwelogin.ui.resetPassword.ForgotPasswordActivity
 import com.aristidevs.nuwelogin.ui.signin.model.UserSignIn
 import com.aristidevs.nuwelogin.ui.verification.VerificationActivity
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.textfield.TextInputEditText
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
@@ -23,30 +27,42 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class SignInActivity : AppCompatActivity() {
 
-    companion object {
-        fun create(context: Context): Intent =
-            Intent(context, SignInActivity::class.java)
-    }
-
-    private lateinit var binding: ActivitySignInBinding
-    private val signInViewModel: SignInViewModel by viewModels()
-
-    @Inject
-    lateinit var dialogLauncher: DialogFragmentLauncher
-
+    private lateinit var etName: TextInputEditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignInBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        initUI()
+        setContentView(R.layout.activity_sign_in)
+
+        val btnLogin = findViewById<MaterialButton>(R.id.btnLogin)
+        btnLogin.setOnClickListener {
+            val intent = Intent(this, SignInActivityEnterData::class.java)
+            startActivity(intent)
+        }
     }
 
-    private fun initUI() {
-        initListeners()
-        initObservers()
-    }
-
-    private fun initListeners() {
+//    companion object {
+//        fun create(context: Context): Intent =
+//            Intent(context, SignInActivity::class.java)
+//    }
+//
+//    private lateinit var binding: ActivitySignInBinding
+//    private val signInViewModel: SignInViewModel by viewModels()
+//
+//    @Inject
+//    lateinit var dialogLauncher: DialogFragmentLauncher
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        binding = ActivitySignInBinding.inflate(layoutInflater)
+//        setContentView(binding.root)
+//        initUI()
+//    }
+//
+//    private fun initUI() {
+//        initListeners()
+//        initObservers()
+//    }
+//
+//    private fun initListeners() {
 
 //        binding.etEmail.loseFocusAfterAction(EditorInfo.IME_ACTION_NEXT)
 //        binding.etEmail.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
@@ -68,7 +84,7 @@ class SignInActivity : AppCompatActivity() {
 //        binding.etRepeatPassword.setOnFocusChangeListener { _, hasFocus -> onFieldChanged(hasFocus) }
 //        binding.etRepeatPassword.onTextChanged { onFieldChanged() }
 
-        binding.btnRegister.setOnClickListener { signInViewModel.onLoginSelected() }
+ //       binding.btnRegister.setOnClickListener { signInViewModel.onLoginSelected() }
 
 //        with(binding) {
 //            btnCreateAccount.setOnClickListener {
@@ -86,41 +102,52 @@ class SignInActivity : AppCompatActivity() {
 //        }
     }
 
-    private fun initObservers() {
-        signInViewModel.navigateToVerifyEmail.observe(this) {
-            it.getContentIfNotHandled()?.let {
-                goToVerifyEmail()
-            }
-        }
+//    private fun initObservers() {
+//        signInViewModel.navigateToVerifyEmail.observe(this) {
+//            it.getContentIfNotHandled()?.let {
+//                goToVerifyEmail()
+//            }
+//        }
+//
+//        signInViewModel.navigateToLogin.observe(this) {
+//            it.getContentIfNotHandled()?.let {
+//                goToLogin()
+//            }
+//        }
+//
+//        signInViewModel.navigateToAskData.observe(this) {
+//            it.getContentIfNotHandled()?.let {
+//                goToAskData()
+//            }
+//        }
+//
+//        lifecycleScope.launchWhenStarted {
+//            signInViewModel.viewState.collect { viewState ->
+//                updateUI(viewState)
+//            }
+//        }
+//
+//        signInViewModel.showErrorDialog.observe(this) { showError ->
+//            if (showError) showErrorDialog()
+//        }
+//    }
 
-        signInViewModel.navigateToLogin.observe(this) {
-            it.getContentIfNotHandled()?.let {
-                goToLogin()
-            }
-        }
+//    private fun goToAskData() {
+//        val intent = Intent(this, SignInActivityEnterData::class.java)
+//        startActivity(intent)
+//    }
 
-        lifecycleScope.launchWhenStarted {
-            signInViewModel.viewState.collect { viewState ->
-                updateUI(viewState)
-            }
-        }
+//    private fun showErrorDialog() {
+//        ErrorDialog.create(
+//            title = getString(R.string.signin_error_dialog_title),
+//            description = getString(R.string.signin_error_dialog_body),
+//            positiveAction = ErrorDialog.Action(getString(R.string.signin_error_dialog_positive_action)) {
+//                it.dismiss()
+//            }
+//        ).show(dialogLauncher, this)
+//    }
 
-        signInViewModel.showErrorDialog.observe(this) { showError ->
-            if (showError) showErrorDialog()
-        }
-    }
-
-    private fun showErrorDialog() {
-        ErrorDialog.create(
-            title = getString(R.string.signin_error_dialog_title),
-            description = getString(R.string.signin_error_dialog_body),
-            positiveAction = ErrorDialog.Action(getString(R.string.signin_error_dialog_positive_action)) {
-                it.dismiss()
-            }
-        ).show(dialogLauncher, this)
-    }
-
-    private fun updateUI(viewState: SignInViewState) {
+//    private fun updateUI(viewState: SignInViewState) {
 //        with(binding) {
 //            pbLoading.isVisible = viewState.isLoading
 //            binding.tilEmail.error =
@@ -134,9 +161,9 @@ class SignInActivity : AppCompatActivity() {
 //            binding.tilRepeatPassword.error =
 //                if (viewState.isValidPassword) null else getString(R.string.signin_error_password)
 //        }
-    }
+ //   }
 
-    private fun onFieldChanged(hasFocus: Boolean = false) {
+ //   private fun onFieldChanged(hasFocus: Boolean = false) {
 //        if (!hasFocus) {
 //            signInViewModel.onFieldsChanged(
 //                UserSignIn(
@@ -148,13 +175,13 @@ class SignInActivity : AppCompatActivity() {
 //                )
 //            )
 //        }
-    }
-
-    private fun goToVerifyEmail() {
-        startActivity(VerificationActivity.create(this))
-    }
-
-    private fun goToLogin() {
-        startActivity(LoginActivity.create(this))
-    }
-}
+ //   }
+//
+//    private fun goToVerifyEmail() {
+//        startActivity(VerificationActivity.create(this))
+//    }
+//
+//    private fun goToLogin() {
+//        startActivity(LoginActivity.create(this))
+//    }
+//}

@@ -26,6 +26,10 @@ class SignInViewModel @Inject constructor(val createAccountUseCase: CreateAccoun
     val navigateToLogin: LiveData<Event<Boolean>>
         get() = _navigateToLogin
 
+    private val _navigateToAskData = MutableLiveData<Event<Boolean>>()
+    val navigateToAskData: LiveData<Event<Boolean>>
+        get() = _navigateToAskData
+
     private val _navigateToVerifyEmail = MutableLiveData<Event<Boolean>>()
     val navigateToVerifyEmail: LiveData<Event<Boolean>>
         get() = _navigateToVerifyEmail

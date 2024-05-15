@@ -1,5 +1,6 @@
 package com.aristidevs.nuwelogin.ui.introduction
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.SpannableString
@@ -99,7 +100,8 @@ class IntroductionActivity : AppCompatActivity() {
 
 
     private fun goToSingIn() {
-        startActivity(SignInActivity.create(this))
+        val intent = Intent(this, SignInActivity::class.java)
+        startActivity(intent)
     }
 
     private fun goToLogin() {

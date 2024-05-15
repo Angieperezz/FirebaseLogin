@@ -150,7 +150,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goToSignIn() {
-        startActivity(SignInActivity.create(this))
+        val intent = Intent(this, SignInActivity::class.java)
+        startActivity(intent)
     }
 
     private fun goToDetail() {

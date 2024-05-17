@@ -20,6 +20,7 @@
     <string name="login_error_dialog_positive_action">Reintentar</string>
     <string name="txtMain">Compra activos tokenizados desde cualquier parte del mundo.</string>
     <string name="txtMain2">\"Controla tus bienes digitales de forma \n flexible y segura\"</string>
+    <string name="verificateUserText">Verifica tu usuario para acceder a nuestros servicios</string>
 
     <string name="introduction_button_signin">Registrate</string>
 
@@ -54,4 +55,6 @@
     <string name="remember_me_text">Recuerdame</string>
     <string name="physic_person">Soy persona física \n Desempeña una actividad económica bajo \n el ejercicio independiente de una profesión</string>
     <string name="moral_person">Soy persona moral \n Desempeña una actividad económica a \n traves una sociedad comercial(Dueño de empresa)</string>
+    <string name="verify_email">Verifica tu correo electrónico \nTe enviaremos un correo con un código de verificación</string>
+    <string name="verify_phone">Verifica tu número de teléfono \nTe enviaremos un código de verificación por SMS</string>
 </resources>

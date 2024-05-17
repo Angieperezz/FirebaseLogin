@@ -32,7 +32,7 @@ class IntroductionActivity : AppCompatActivity() {
         binding = ActivityIntroductionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val texto = "Compra activos tokenizados desde cualquier parte del mundo"
+        val texto = "Compra activos tokenizados desde cualquier parte del mundo."
         val spannableString = SpannableString(texto)
         spannableString.setSpan(
             ForegroundColorSpan(Color.BLACK),

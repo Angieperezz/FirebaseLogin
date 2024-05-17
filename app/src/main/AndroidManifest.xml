@@ -33,6 +33,9 @@
             android:name=".ui.signin.ActivityMoralOrPhysicPerson"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ui.signin.model.SignInVerification"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ui.introduction.IntroductionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme"

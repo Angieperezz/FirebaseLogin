@@ -33,6 +33,15 @@
             android:name=".ui.signin.ActivityMoralOrPhysicPerson"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ui.signin.VerifyUserEmailOrPhone"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.signin.VerifyUserEmail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.signin.VerifyUserPhone"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ui.signin.model.SignInVerification"
             android:screenOrientation="portrait" />
         <activity

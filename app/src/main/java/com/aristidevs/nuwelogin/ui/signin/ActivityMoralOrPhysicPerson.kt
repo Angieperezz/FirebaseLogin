@@ -1,5 +1,6 @@
 package com.aristidevs.nuwelogin.ui.signin
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.aristidevs.nuwelogin.R
@@ -14,6 +15,8 @@ class ActivityMoralOrPhysicPerson: AppCompatActivity() {
 
         val btnNext = findViewById<MaterialButton>(R.id.btnNext)
         btnNext.setOnClickListener {
+            val intent = Intent(this, VerifyUserEmailOrPhone::class.java)
+            startActivity(intent)
             //startActivity(VerificationActivity.create(this))
         }
 

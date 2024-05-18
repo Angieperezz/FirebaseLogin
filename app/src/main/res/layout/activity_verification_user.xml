@@ -5,7 +5,7 @@
     android:background="@color/primary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.signin.model.SignInVerification">
+    tools:context=".ui.signin.VerifyUserEmailOrPhone">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -26,13 +26,13 @@
         android:id="@+id/titleText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="155dp"
         android:layout_marginBottom="20dp"
         android:textAlignment="center"
         android:textSize="16sp"
         android:text="@string/verificateUserText"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_regular"
+        android:fontFamily="@font/inter_semi_bold"
         app:layout_constraintBottom_toTopOf="@+id/cardViewPart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

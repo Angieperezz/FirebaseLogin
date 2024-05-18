@@ -31,7 +31,7 @@
         android:textSize="24sp"
         android:text="@string/we_want_to_know_you"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_regular"
+        android:fontFamily="@font/poppins_semi_bold"
         app:layout_constraintBottom_toTopOf="@+id/titleText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +46,7 @@
         android:textSize="14sp"
         android:text="@string/we_want_to_know_you_text"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_regular"
+        android:fontFamily="@font/poppins_light"
         app:layout_constraintBottom_toTopOf="@+id/cardViewPart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view1"
         android:layout_width="match_parent"
-        android:layout_height="113dp"
+        android:layout_height="115dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="21dp"
@@ -77,7 +77,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_gravity="center">
 
@@ -86,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="#007bff"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="35dp"
                 style="@style/CustomCheckboxStyle" />
 
             <TextView
@@ -95,8 +95,9 @@
                 android:layout_height="80dp"
                 android:layout_weight="1"
                 android:layout_marginEnd="7dp"
+                android:layout_marginTop="10dp"
                 android:textSize="12sp"
-                android:fontFamily="@font/poppins_regular"
+                android:fontFamily="@font/poppins_light"
                 android:textColor="#333333"
                 android:text="@string/physic_person" />
 
@@ -108,11 +109,10 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view2"
         android:layout_width="match_parent"
-        android:layout_height="113dp"
+        android:layout_height="115dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="21dp"
-        android:layout_gravity="center"
         android:layout_marginEnd="21dp"
         app:cardBackgroundColor="@color/primary"
         android:background="@drawable/border_background"
@@ -121,25 +121,27 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
 
             <com.google.android.material.checkbox.MaterialCheckBox
                 android:id="@+id/checkbox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="35dp"
                 android:buttonTint="#007bff"
                 style="@style/CustomCheckboxStyle" />
 
             <TextView
                 android:id="@+id/text_view2"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="7dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:textSize="12sp"
-                android:fontFamily="@font/poppins_regular"
+                android:fontFamily="@font/poppins_light"
                 android:textColor="#333333"
                 android:text="@string/moral_person" />
 

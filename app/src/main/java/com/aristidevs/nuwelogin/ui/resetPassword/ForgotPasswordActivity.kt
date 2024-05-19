@@ -1,5 +1,6 @@
 package com.aristidevs.nuwelogin.ui.resetPassword
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -42,7 +43,9 @@ class ForgotPasswordActivity : AppCompatActivity() {
     }
 
     private fun sendPasswordReset(email: String) {
-            startActivity(VerificationActivity.create(this))
+         //   startActivity(VerificationActivity.create(this))
+        val intent = Intent(this, ForgotPasswordEnterCodeValidationActivity::class.java)
+        startActivity(intent)
         // Lógica para enviar el correo electrónico para restablecer la contraseña
         // Por ejemplo, puedes utilizar una API para enviar el correo electrónico
         // O puedes utilizar un método de la base de datos para recuperar el usuario y enviar el correo electrónico

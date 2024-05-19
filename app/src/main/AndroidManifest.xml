@@ -48,6 +48,12 @@
             android:name=".ui.signin.SignInResultValidationCode"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ui.resetPassword.ForgotPasswordEnterCodeValidationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.resetPassword.ForgotPasswordEnterNew"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ui.introduction.IntroductionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme"

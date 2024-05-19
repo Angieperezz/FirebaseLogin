@@ -3,6 +3,7 @@ package com.aristidevs.nuwelogin.ui.signin
 import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.aristidevs.nuwelogin.R
 import com.google.android.material.button.MaterialButton
@@ -28,26 +29,31 @@ class VerifyUserPhone : AppCompatActivity() {
         codeEditText3 = findViewById(R.id.code3)
         codeEditText4 = findViewById(R.id.code4)
 
-        val codeValue1 = codeEditText1.text.toString()
-        val codeValue2 = codeEditText2.text.toString()
-        val codeValue3 = codeEditText3.text.toString()
-        val codeValue4 = codeEditText4.text.toString()
-
-        codeIntroduced = codeValue1 + codeValue2 + codeValue3 + codeValue4
-        // Procesar el valor recuperado
-        println("Code value: $codeIntroduced")
-
         val btnNext = findViewById<MaterialButton>(R.id.btnNext)
-
-
 
         btnNext.setOnClickListener {
             isUserPhoneCode = true
-            val intent = Intent(this, SignInResultValidationCode::class.java)
-            startActivity(intent)
+            var codeValue1 = codeEditText1.text.toString()
+            var codeValue2 = codeEditText2.text.toString()
+            var codeValue3 = codeEditText3.text.toString()
+            var codeValue4 = codeEditText4.text.toString()
+
+            codeIntroduced = codeValue1 + codeValue2 + codeValue3 + codeValue4
+            // Procesar el valor recuperado
+            println("Code value: $codeIntroduced")
+            if(!codeIntroduced.isEmpty()) {
+                val intent = Intent(this, SignInResultValidationCode::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "El codigo no puede estar vacio", Toast.LENGTH_SHORT).show()
+            }
         }
 
 
+    }
+
+    override fun onResume() {
+        super.onResume()
     }
 
     override fun onDestroy() {

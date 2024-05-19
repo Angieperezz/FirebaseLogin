@@ -5,6 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.aristidevs.nuwelogin.R
+import com.aristidevs.nuwelogin.ui.signin.VerifyUserEmail.Companion.codeIntroducedEmail
 import com.aristidevs.nuwelogin.ui.signin.VerifyUserEmail.Companion.isUserEmailCode
 import com.aristidevs.nuwelogin.ui.signin.VerifyUserPhone.Companion.codeIntroduced
 import com.aristidevs.nuwelogin.ui.signin.VerifyUserPhone.Companion.isUserPhoneCode
@@ -26,17 +27,17 @@ class SignInResultValidationCode: AppCompatActivity() {
         }
 
     private fun initUI() {
-        if(codeIntroduced == "1234" && isUserPhoneCode == true){
+        if(codeIntroduced == "1234" && isUserPhoneCode){
             imageView.setImageResource(R.drawable.success_check)
-            textView.text = ("Hemos confirmado correctamente tu numero telefonico")
+            textView.text = ("Hemos confirmado correctamente tu \nnúmero de teléfono")
 
-        } else if(codeIntroduced == ""){
+        } else if(codeIntroducedEmail == "1234" && isUserEmailCode){
+            imageView.setImageResource(R.drawable.success_check)
+            textView.text = ("Hemos confirmado correctamente tu \ncorreo electrónico")
+        } else if(codeIntroduced == "" || codeIntroducedEmail == "" || codeIntroducedEmail != "1234"|| codeIntroduced != "1234"){
            //imageView.setBackgroundColor(getResources().getColor(R.color.errorBackground))
            imageView.setImageResource(R.drawable.fail_background)
-            textView.text = ("El codigo introducido esta vacio o es incorrecto")
-        } else if(codeIntroduced == "1234" && isUserEmailCode == true){
-            imageView.setImageResource(R.drawable.success_check)
-            textView.text = ("Hemos confirmado correctamente tu correo electronico")
+           textView.text = ("El código introducido esta vacio o es incorrecto")
         }
     }
 }

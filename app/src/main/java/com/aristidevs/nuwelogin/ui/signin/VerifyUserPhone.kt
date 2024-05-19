@@ -9,7 +9,10 @@ import com.google.android.material.button.MaterialButton
 
 class VerifyUserPhone : AppCompatActivity() {
 
-    private lateinit var codeEditText: EditText
+    private lateinit var codeEditText1: EditText
+    private lateinit var codeEditText2: EditText
+    private lateinit var codeEditText3: EditText
+    private lateinit var codeEditText4: EditText
 
     companion object {
         var isUserPhoneCode: Boolean = false
@@ -20,10 +23,19 @@ class VerifyUserPhone : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.verify_number_phone)
 
-        codeEditText = findViewById(R.id.codeBox)
-        val codeValue = codeEditText.text.toString()
+        codeEditText1 = findViewById(R.id.code1)
+        codeEditText2 = findViewById(R.id.code2)
+        codeEditText3 = findViewById(R.id.code3)
+        codeEditText4 = findViewById(R.id.code4)
+
+        val codeValue1 = codeEditText1.text.toString()
+        val codeValue2 = codeEditText2.text.toString()
+        val codeValue3 = codeEditText3.text.toString()
+        val codeValue4 = codeEditText4.text.toString()
+
+        codeIntroduced = codeValue1 + codeValue2 + codeValue3 + codeValue4
         // Procesar el valor recuperado
-        println("Code value: $codeValue")
+        println("Code value: $codeIntroduced")
 
         val btnNext = findViewById<MaterialButton>(R.id.btnNext)
 
@@ -31,7 +43,6 @@ class VerifyUserPhone : AppCompatActivity() {
 
         btnNext.setOnClickListener {
             isUserPhoneCode = true
-            codeIntroduced = codeEditText.text.toString()
             val intent = Intent(this, SignInResultValidationCode::class.java)
             startActivity(intent)
         }

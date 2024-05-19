@@ -17,6 +17,7 @@
     <color name="paper">#2E353F</color>
 
     <color name="error">#e84545</color>
+    <color name="errorBackground">#FFCED6</color>
     <color name="error_dark">#d32f2f</color>
 
     <color name="warning_dark">#F48B29</color>

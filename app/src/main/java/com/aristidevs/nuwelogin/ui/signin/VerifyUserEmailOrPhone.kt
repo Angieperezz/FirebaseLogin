@@ -23,11 +23,6 @@ class VerifyUserEmailOrPhone : AppCompatActivity() {
             val intent = Intent(this, VerifyUserPhone::class.java)
             startActivity(intent)
         }
-//        val btnNext = findViewById<MaterialButton>(R.id.btnNext)
-//        btnNext.setOnClickListener {
-//            //startActivity(VerificationActivity.create(this))
-//        }
-
 
     }
 }

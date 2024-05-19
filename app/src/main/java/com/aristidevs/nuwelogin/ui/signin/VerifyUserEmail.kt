@@ -39,9 +39,6 @@ class VerifyUserEmail : AppCompatActivity() {
             var codeValue4 = codeEditText4.text.toString()
 
            codeIntroducedEmail = codeValue1 + codeValue2 + codeValue3 + codeValue4
-            // Procesar el valor recuperado
-            println("Code value email: $codeIntroducedEmail")
-            println("boolean value email: $isUserEmailCode")
             if(!codeIntroducedEmail.isEmpty()) {
                 val intent = Intent(this, SignInResultValidationCode::class.java)
                 startActivity(intent)

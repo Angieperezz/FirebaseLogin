@@ -20,8 +20,13 @@ class ForgotPasswordEnterNew : AppCompatActivity() {
 
 
         val btnConfirm = findViewById<MaterialButton>(R.id.btnConfirm)
+        val btnBack = findViewById<MaterialButton>(R.id.btnBack)
         btnConfirm.setOnClickListener {
             Toast.makeText(this, "Tu contraseña ha sido cambiada exitosamente", Toast.LENGTH_SHORT).show()
+        }
+
+        btnBack.setOnClickListener {
+            onBackPressed()
         }
 
     }

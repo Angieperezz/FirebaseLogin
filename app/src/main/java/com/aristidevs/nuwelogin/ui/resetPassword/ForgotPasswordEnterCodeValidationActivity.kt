@@ -15,11 +15,15 @@ class ForgotPasswordEnterCodeValidationActivity : AppCompatActivity() {
 
 
         val btnNext = findViewById<MaterialButton>(R.id.btnNext)
+        val btnBack = findViewById<MaterialButton>(R.id.btnBack)
         btnNext.setOnClickListener {
             Toast.makeText(this, "Codigo fino, next pantalla", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, ForgotPasswordEnterNew::class.java)
             startActivity(intent)
         }
 
+        btnBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 }

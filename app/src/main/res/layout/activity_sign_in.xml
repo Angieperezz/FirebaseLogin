@@ -25,17 +25,31 @@
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
         android:layout_marginBottom="20dp"
         android:textAlignment="center"
         android:textSize="24sp"
         android:text="@string/login_footer_selected"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_regular"
+        android:fontFamily="@font/poppins_semi_bold"
         app:layout_constraintBottom_toTopOf="@+id/tilEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewHeader"/>
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:text="@string/we_want_to_know_you_text"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toTopOf="@+id/tilEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"/>
 
     <TextView
         android:id="@+id/titleEmail"
@@ -45,11 +59,11 @@
         android:textSize="11sp"
         android:text="@string/signin_form_email"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_regular"
+        android:fontFamily="@font/inter_light"
         android:layout_marginStart="21dp"
         app:layout_constraintBottom_toTopOf="@+id/tilEmail"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"/>
+        app:layout_constraintTop_toBottomOf="@+id/titleText"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmail"
@@ -79,7 +93,7 @@
         android:textSize="11sp"
         android:text="@string/signin_form_password"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_regular"
+        android:fontFamily="@font/inter_light"
         android:layout_marginStart="21dp"
         app:layout_constraintBottom_toTopOf="@+id/tilEmail"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +129,7 @@
         android:textSize="11sp"
         android:text="@string/signin_form_repeat_password"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_regular"
+        android:fontFamily="@font/inter_light"
         android:layout_marginStart="21dp"
         app:layout_constraintBottom_toTopOf="@+id/tilPassword"
         app:layout_constraintStart_toStartOf="parent"

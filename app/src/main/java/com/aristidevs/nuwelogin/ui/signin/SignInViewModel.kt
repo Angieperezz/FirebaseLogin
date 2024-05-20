@@ -56,7 +56,7 @@ class SignInViewModel @Inject constructor(val createAccountUseCase: CreateAccoun
             _viewState.value = SignInViewState(isLoading = true)
             val accountCreated = createAccountUseCase(userSignIn)
             if (accountCreated) {
-                _navigateToVerifyEmail.value = Event(true)
+                _navigateToAskData.value = Event(true)
             } else {
                 _showErrorDialog.value = true
             }
@@ -84,9 +84,7 @@ class SignInViewModel @Inject constructor(val createAccountUseCase: CreateAccoun
     private fun UserSignIn.toSignInViewState(): SignInViewState {
         return SignInViewState(
             isValidEmail = isValidOrEmptyEmail(email),
-            isValidPassword = isValidOrEmptyPassword(password, passwordConfirmation),
-            isValidNickName = isValidName(nickName),
-            isValidRealName = isValidName(realName)
+            isValidPassword = isValidOrEmptyPassword(password, passwordConfirmation)
         )
     }
 }

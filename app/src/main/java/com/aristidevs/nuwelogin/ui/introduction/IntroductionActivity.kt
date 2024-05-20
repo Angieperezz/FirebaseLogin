@@ -52,9 +52,9 @@ class IntroductionActivity : AppCompatActivity() {
         initUI()
 
         val demoData = arrayListOf(
-            R.drawable.image1,
+            R.drawable.slide_1,
             R.drawable.image2,
-            R.drawable.image3,
+            R.drawable.slide_3,
         )
 
         val marginDp = 16

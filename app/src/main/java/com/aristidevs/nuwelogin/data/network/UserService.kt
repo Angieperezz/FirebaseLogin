@@ -13,9 +13,7 @@ class UserService @Inject constructor(private val firebase: FirebaseClient) {
     suspend fun createUserTable(userSignIn: UserSignIn) = runCatching {
 
         val user = hashMapOf(
-            "email" to userSignIn.email,
-            "nickname" to userSignIn.nickName,
-            "realname" to userSignIn.realName
+            "email" to userSignIn.email
         )
 
         firebase.db

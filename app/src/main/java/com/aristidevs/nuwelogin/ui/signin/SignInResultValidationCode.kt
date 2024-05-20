@@ -36,8 +36,8 @@ class SignInResultValidationCode: AppCompatActivity() {
             textView.text = ("Hemos confirmado correctamente tu \ncorreo electrónico")
         } else if(codeIntroduced == "" || codeIntroducedEmail == "" || codeIntroducedEmail != "1234"|| codeIntroduced != "1234"){
            //imageView.setBackgroundColor(getResources().getColor(R.color.errorBackground))
-           imageView.setImageResource(R.drawable.fail_background)
-           textView.text = ("El código introducido esta vacio o es incorrecto")
+           imageView.setImageResource(R.drawable.checkmark_error)
+           textView.text = ("El código introducido es incorrecto")
         }
     }
 }

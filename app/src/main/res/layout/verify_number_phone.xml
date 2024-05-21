@@ -73,11 +73,12 @@
             <EditText
                 android:id="@+id/code1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:inputType="number"
                 android:maxLength="1"
                 android:gravity="center"
-                android:autofillHints="" />
+                android:textCursorDrawable="@null"
+                android:background="@null"/>
 
         </FrameLayout>
 
@@ -93,10 +94,12 @@
             <EditText
                 android:id="@+id/code2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:inputType="number"
                 android:maxLength="1"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textCursorDrawable="@null"
+                android:background="@null" />
 
         </FrameLayout>
 
@@ -112,10 +115,12 @@
             <EditText
                 android:id="@+id/code3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:inputType="number"
                 android:maxLength="1"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textCursorDrawable="@null"
+                android:background="@null"/>
 
         </FrameLayout>
 
@@ -129,12 +134,13 @@
             android:padding="4dp">
 
             <EditText
-                android:id="@+id/code4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/code4" android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:inputType="number"
                 android:maxLength="1"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textCursorDrawable="@null"
+                android:background="@null" />
 
         </FrameLayout>
 

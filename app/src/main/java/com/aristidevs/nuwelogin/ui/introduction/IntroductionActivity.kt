@@ -53,7 +53,7 @@ class IntroductionActivity : AppCompatActivity() {
 
         val demoData = arrayListOf(
             R.drawable.slide_1,
-            R.drawable.image2,
+            R.drawable.slide_2,
             R.drawable.slide_3,
         )
 

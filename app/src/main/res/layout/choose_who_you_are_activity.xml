@@ -85,9 +85,8 @@
                 android:id="@+id/checkbox1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="#007bff"
                 android:layout_marginTop="35dp"
-                style="@style/CustomCheckboxStyle" />
+                android:button="@drawable/checkbox_circle_selector" />
 
             <TextView
                 android:id="@+id/text_view1"
@@ -130,8 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
-                android:buttonTint="#007bff"
-                style="@style/CustomCheckboxStyle" />
+                android:button="@drawable/checkbox_circle_selector" />
 
             <TextView
                 android:id="@+id/text_view2"

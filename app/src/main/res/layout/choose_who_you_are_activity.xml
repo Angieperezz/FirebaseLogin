@@ -72,8 +72,8 @@
         android:layout_marginStart="21dp"
         android:layout_marginEnd="21dp"
         app:cardElevation="4dp"
-        app:cardBackgroundColor="#E8E0FF"
-        app:cardCornerRadius="11dp">
+        app:cardBackgroundColor="@color/primary"
+        app:cardCornerRadius="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -117,7 +117,7 @@
         app:cardBackgroundColor="@color/primary"
         android:background="@drawable/border_background"
         app:cardElevation="4dp"
-        app:cardCornerRadius="11dp">
+        app:cardCornerRadius="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -10,11 +10,14 @@ import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import com.aristidevs.nuwelogin.R
 import com.google.android.material.button.MaterialButton
 
 class ActivityMoralOrPhysicPerson: AppCompatActivity() {
 
+    private var cardView1Selected = false
+    private var cardView2Selected = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +40,27 @@ class ActivityMoralOrPhysicPerson: AppCompatActivity() {
             17,
             Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
         )
+        val card_view1 = findViewById<CardView>(R.id.card_view1)
+        val card_view2 = findViewById<CardView>(R.id.card_view2)
+
+        card_view1.setOnClickListener {
+            if (!cardView1Selected) {
+                card_view1.setBackgroundColor(resources.getColor(R.color.card_view_selected))
+                cardView1Selected = true
+            } else {
+                card_view1.setBackgroundColor(resources.getColor(R.color.primary))
+                cardView1Selected = false
+            }
+        }
+        card_view2.setOnClickListener {
+            if (!cardView2Selected) {
+                card_view2.setBackgroundColor(resources.getColor(R.color.card_view_selected))
+                cardView2Selected = true
+            } else {
+                card_view2.setBackgroundColor(resources.getColor(R.color.primary))
+                cardView2Selected = false
+            }
+        }
 
         val textView1 = findViewById<TextView>(R.id.text_view1)
         textView1.text = spannableString

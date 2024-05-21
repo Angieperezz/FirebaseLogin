@@ -5,5 +5,12 @@
         android:height="24dp"
         android:width="24dp" />
     <solid
-        android:color="@color/secondary_dark" />
+        android:color="@color/primary" />
+    <stroke
+        android:color="#000000"
+        android:width="1dp"
+    android:dashGap="0dp"
+    android:strokeLineCap="round"
+    android:strokeLineJoin="round"
+    />
 </shape>

@@ -81,10 +81,11 @@
             android:orientation="horizontal"
             android:layout_gravity="center">
 
-            <com.google.android.material.checkbox.MaterialCheckBox
+            <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/checkbox1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="35dp"
                 android:button="@drawable/checkbox_circle_selector" />
 
@@ -124,19 +125,20 @@
             android:orientation="horizontal"
             android:layout_gravity="center">
 
-            <com.google.android.material.checkbox.MaterialCheckBox
+            <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/checkbox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
+                android:layout_marginStart="20dp"
                 android:button="@drawable/checkbox_circle_selector" />
 
             <TextView
                 android:id="@+id/text_view2"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginEnd="3dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="16dp"
                 android:layout_weight="1"
                 android:textSize="12sp"
                 android:fontFamily="@font/poppins_light"

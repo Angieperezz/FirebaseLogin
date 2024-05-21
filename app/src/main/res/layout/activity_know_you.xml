@@ -71,7 +71,7 @@
         android:layout_width="0dp"
         style="@style/FormTextInputLayout"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/tilPassword"
+        app:layout_constraintBottom_toTopOf="@+id/tilLasName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tittleName">
@@ -88,7 +88,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/titlePassword"
+        android:id="@+id/titleLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="11sp"
@@ -98,10 +98,10 @@
         android:layout_marginStart="21dp"
         app:layout_constraintBottom_toTopOf="@+id/tilEmail"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPassword"/>
+        app:layout_constraintTop_toBottomOf="@+id/tilLasName"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPassword"
+        android:id="@+id/tilLasName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         style="@style/FormTextInputLayout"
@@ -111,7 +111,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tilEmail" >
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
+            android:id="@+id/etLastName"
             style="@style/FormEditText"
             android:background="@drawable/border_background"
             android:layout_width="match_parent"
@@ -132,22 +132,22 @@
         android:textColor="@color/black"
         android:fontFamily="@font/inter_light"
         android:layout_marginStart="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/tilPassword"
+        app:layout_constraintBottom_toTopOf="@+id/tilLasName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPasswordRepeat"/>
+        app:layout_constraintTop_toBottomOf="@+id/tilNumberPhone"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPasswordRepeat"
+        android:id="@+id/tilNumberPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         style="@style/FormTextInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPassword" >
+        app:layout_constraintTop_toBottomOf="@+id/tilLasName" >
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPasswordRepeat"
+            android:id="@+id/etNumberPhone"
             style="@style/FormEditText"
             android:background="@drawable/border_background"
             android:layout_width="match_parent"
@@ -170,6 +170,6 @@
         android:text="@string/next_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPasswordRepeat" />
+        app:layout_constraintTop_toBottomOf="@+id/tilNumberPhone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

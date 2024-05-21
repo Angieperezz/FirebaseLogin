@@ -87,7 +87,12 @@ class SignInActivity : AppCompatActivity() {
         with(binding) {
             btnLogin.setOnClickListener {
                 it.dismissKeyboard()
+                if(etEmail.length() == 0 || etPassword.length() == 0 || etPasswordRepeat.length() == 0) {
+                    showErrorDialogEmpty()
+                }   else{
                     goToAskData()
+                }
+
 
 //                signInViewModel.onSignInSelected(
 //                    UserSignIn(
@@ -140,6 +145,16 @@ class SignInActivity : AppCompatActivity() {
         ErrorDialog.create(
             title = getString(R.string.signin_error_dialog_title),
             description = getString(R.string.signin_error_dialog_body),
+            positiveAction = ErrorDialog.Action(getString(R.string.signin_error_dialog_positive_action)) {
+                it.dismiss()
+            }
+        ).show(dialogLauncher, this)
+    }
+
+    private fun showErrorDialogEmpty() {
+        ErrorDialog.create(
+            title = getString(R.string.signin_error_dialog_title),
+            description = "Todos los campos deben ser rellenados",
             positiveAction = ErrorDialog.Action(getString(R.string.signin_error_dialog_positive_action)) {
                 it.dismiss()
             }

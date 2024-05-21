@@ -54,13 +54,12 @@
             android:id="@+id/card_view1"
             android:layout_width="match_parent"
             android:layout_height="113dp"
-            android:layout_marginBottom="16dp"
             android:layout_marginStart="21dp"
             android:layout_marginEnd="21dp"
             android:layout_marginTop="41dp"
             app:cardElevation="4dp"
             app:cardBackgroundColor="@color/primary"
-            app:cardCornerRadius="11dp">
+            app:cardCornerRadius="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,22 +67,24 @@
             android:orientation="horizontal"
             android:layout_gravity="center">
 
-            <com.google.android.material.checkbox.MaterialCheckBox
+            <ImageView
                 android:id="@+id/checkbox1"
+                android:src="@drawable/icon_card_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:buttonTint="#007bff"
-                style="@style/CustomCheckboxStyle" />
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                />
 
             <TextView
                 android:id="@+id/text_view1"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_weight="1"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="7dp"
                 android:textSize="12sp"
-                android:fontFamily="@font/poppins_regular"
+                android:fontFamily="@font/poppins_light"
                 android:textColor="#333333"
                 android:text="@string/verify_email" />
 
@@ -97,42 +98,42 @@
             android:id="@+id/card_view2"
             android:layout_width="match_parent"
             android:layout_height="113dp"
-            android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:layout_marginStart="21dp"
-            android:layout_gravity="center"
             android:layout_marginEnd="21dp"
-            app:cardBackgroundColor="@color/primary"
-            android:background="@drawable/border_background"
+            android:layout_marginTop="31dp"
             app:cardElevation="4dp"
-            app:cardCornerRadius="11dp">
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="15dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/checkbox2"
+                android:src="@drawable/icon_card_view"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                />
 
-                <com.google.android.material.checkbox.MaterialCheckBox
-                    android:id="@+id/checkbox2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:buttonTint="#007bff"
-                    style="@style/CustomCheckboxStyle" />
+            <TextView
+                android:id="@+id/text_view2"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="7dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_light"
+                android:textColor="#333333"
+                android:text="@string/verify_phone" />
 
-                <TextView
-                    android:id="@+id/text_view2"
-                    android:layout_width="0dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="7dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="#333333"
-                    android:text="@string/verify_phone" />
-
-            </LinearLayout>
+        </LinearLayout>
 
         </androidx.cardview.widget.CardView>
     </androidx.appcompat.widget.LinearLayoutCompat>

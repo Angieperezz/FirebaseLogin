@@ -30,8 +30,8 @@
 
 
     <!--    verification Module text-->
-    <string name="verify_email">Verifica tu correo electrónico \nTe enviaremos un correo con un código de verificación</string>
-    <string name="verify_phone">Verifica tu número de teléfono \nTe enviaremos un código de verificación por SMS</string>
+    <string name="verify_email">Verifica tu correo electrónico \n\nTe enviaremos un correo con un código de verificación</string>
+    <string name="verify_phone">Verifica tu número de teléfono \n\nTe enviaremos un código de verificación por SMS</string>
     <string name="verificateUserText">Verifica tu usuario para acceder a \n nuestros servicios</string>
     <string name="verificateUserEmail">Validación de correo electronico</string>
     <string name="verificateUserPhone">Validación de número de teléfono</string>

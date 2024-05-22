@@ -65,10 +65,15 @@ class LoginActivity : AppCompatActivity() {
 
         binding.btnLogin.setOnClickListener {
             it.dismissKeyboard()
-            loginViewModel.onLoginSelected(
-                binding.etEmail.text.toString(),
-                binding.etPassword.text.toString()
-            )
+//            loginViewModel.onLoginSelected(
+//                binding.etEmail.text.toString(),
+//                binding.etPassword.text.toString()
+//            )
+            if(!binding.etEmail.text.toString().isEmpty() && !binding.etPassword.text.toString().isEmpty()) {
+                goToDetail()
+            } else {
+                showErrorDialog2()
+            }
         }
     }
 
@@ -139,6 +144,19 @@ class LoginActivity : AppCompatActivity() {
                     userLogin.email,
                     userLogin.password
                 )
+                it.dismiss()
+            }
+        ).show(dialogLauncher, this)
+    }
+
+    private fun showErrorDialog2() {
+        ErrorDialog.create(
+            title = getString(R.string.login_error_dialog_title),
+            description = getString(R.string.login_error_dialog_body),
+            negativeAction = ErrorDialog.Action(getString(R.string.login_error_dialog_negative_action)) {
+                it.dismiss()
+            },
+            positiveAction = ErrorDialog.Action(getString(R.string.login_error_dialog_positive_action)) {
                 it.dismiss()
             }
         ).show(dialogLauncher, this)

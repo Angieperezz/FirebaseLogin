@@ -6,6 +6,7 @@ import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.Gravity
 import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.fragment.app.DialogFragment
@@ -24,6 +25,7 @@ class LoginSuccessDialog : DialogFragment() {
 
         window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        window.setGravity(Gravity.TOP)
     }
 
     @SuppressLint("InflateParams")

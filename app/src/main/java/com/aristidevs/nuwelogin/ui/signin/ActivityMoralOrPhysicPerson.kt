@@ -45,19 +45,19 @@ class ActivityMoralOrPhysicPerson: AppCompatActivity() {
 
         card_view1.setOnClickListener {
             if (!cardView1Selected) {
-                card_view1.setBackgroundColor(resources.getColor(R.color.card_view_selected))
+                card_view1.setBackgroundDrawable(getResources().getDrawable(R.drawable.card_view_style))
                 cardView1Selected = true
             } else {
-                card_view1.setBackgroundColor(resources.getColor(R.color.primary))
+                card_view1.setBackgroundDrawable(getResources().getDrawable(R.drawable.card_view_style_not_selected))
                 cardView1Selected = false
             }
         }
         card_view2.setOnClickListener {
             if (!cardView2Selected) {
-                card_view2.setBackgroundColor(resources.getColor(R.color.card_view_selected))
+                card_view2.setBackgroundDrawable(getResources().getDrawable(R.drawable.card_view_style))
                 cardView2Selected = true
             } else {
-                card_view2.setBackgroundColor(resources.getColor(R.color.primary))
+                card_view2.setBackgroundDrawable(getResources().getDrawable(R.drawable.card_view_style_not_selected))
                 cardView2Selected = false
             }
         }

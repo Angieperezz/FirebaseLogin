@@ -112,14 +112,14 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etLastName"
-            style="@style/FormEditText"
+            style="@style/FormEditTextWithBorder"
             android:background="@drawable/border_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"
-            android:inputType="textPassword"
             android:textColorHighlight="@color/error_dark"
-            android:textColorHint="@color/error_dark" />
+            android:textColorHint="@color/error_dark"
+            android:inputType="textEmailAddress"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

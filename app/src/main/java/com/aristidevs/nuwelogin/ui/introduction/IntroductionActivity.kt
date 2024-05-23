@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -66,6 +67,22 @@ class IntroductionActivity : AppCompatActivity() {
         recyclerView.adapter = CarouselCardAdapter(demoData)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.addItemDecoration(transformerDecoration)
+
+        val adapter = CarouselCardAdapter(demoData)
+        recyclerView.adapter = adapter
+
+        val dot1 = findViewById<ImageView>(R.id.dot1)
+        val dot2 = findViewById<ImageView>(R.id.dot2)
+        val dot3 = findViewById<ImageView>(R.id.dot3)
+
+        val currentIndex = adapter.getCurrentImageIndex()
+        if(currentIndex == 0){
+           dot1.setImageResource(R.drawable.dot_active)
+        } else if(currentIndex == 1){
+            dot2.setImageResource(R.drawable.dot_active)
+        } else if(currentIndex == 2){
+            dot3.setImageResource(R.drawable.dot_active)
+        }
 
         binding.roundedCardView.clipChildren = false
         binding.roundedCardView.clipToPadding = false

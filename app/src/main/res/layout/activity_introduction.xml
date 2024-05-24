@@ -18,26 +18,20 @@
         android:layout_marginStart="21dp"
         android:layout_marginTop="50dp"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/rounded_card_view"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="358dp"
-        android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:layout_marginStart="21dp"
         android:layout_marginEnd="21dp"
-        app:cardCornerRadius="46dp">
+        app:cardCornerRadius="46dp"
+        android:elevation="15dp"
+        android:background="@drawable/carousel_border"
+        app:layoutManager="androidx.viewpager.widget.ViewPager"
+        />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            />
 
-    </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView"
@@ -69,7 +63,7 @@
             android:id="@+id/dot1"
             android:layout_width="10dp"
             android:layout_height="10dp"
-            android:src="@drawable/dot_inactive"
+            android:src="@drawable/dot_active"
             app:layout_constraintEnd_toStartOf="@id/dot2" />
 
         <ImageView

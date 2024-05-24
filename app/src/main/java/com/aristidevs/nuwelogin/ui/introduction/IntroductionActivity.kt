@@ -11,11 +11,9 @@ import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager
 import com.aristidevs.nuwelogin.R
 import com.aristidevs.nuwelogin.databinding.ActivityIntroductionBinding
-import com.aristidevs.nuwelogin.domain.CarouselCardAdapter
 import com.aristidevs.nuwelogin.ui.login.LoginActivity
 import com.aristidevs.nuwelogin.ui.signin.SignInActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -52,41 +50,50 @@ class IntroductionActivity : AppCompatActivity() {
         textView.text = spannableString
         initUI()
 
-        val demoData = arrayListOf(
-            R.drawable.slide_1,
-            R.drawable.slide_2,
-            R.drawable.slide_3,
+        val viewPager = findViewById<ViewPager>(R.id.view_pager)
+        val imagesCarousel = arrayListOf(
+            CarouselItem(R.drawable.slide_1),
+            CarouselItem(R.drawable.slide_2),
+            CarouselItem(R.drawable.slide_3),
         )
-
-        val marginDp = 16
-        val transformerDecoration = CardViewPageTransformerDecoration(marginDp)
-
-
-        val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-        recyclerView.layoutManager
-        recyclerView.adapter = CarouselCardAdapter(demoData)
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerView.addItemDecoration(transformerDecoration)
-
-        val adapter = CarouselCardAdapter(demoData)
-        recyclerView.adapter = adapter
+        viewPager.adapter = CarouselAdapter(imagesCarousel)
 
         val dot1 = findViewById<ImageView>(R.id.dot1)
         val dot2 = findViewById<ImageView>(R.id.dot2)
         val dot3 = findViewById<ImageView>(R.id.dot3)
 
-        val currentIndex = adapter.getCurrentImageIndex()
-        if(currentIndex == 0){
-           dot1.setImageResource(R.drawable.dot_active)
-        } else if(currentIndex == 1){
-            dot2.setImageResource(R.drawable.dot_active)
-        } else if(currentIndex == 2){
-            dot3.setImageResource(R.drawable.dot_active)
-        }
+        val carouselAdapter = CarouselAdapter(imagesCarousel)
+        viewPager.adapter = carouselAdapter
 
-        binding.roundedCardView.clipChildren = false
-        binding.roundedCardView.clipToPadding = false
+        viewPager.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+                // No se llama automáticamente, solo se llama cuando se está deslizando
+            }
 
+            override fun onPageSelected(position: Int) {
+                // Aquí puedes obtener la posición actual
+                println("Current position: $position")
+
+                // Actualiza tus puntos de imagen aquí
+                if (position == 0) {
+                    dot1.setImageResource(R.drawable.dot_active)
+                    dot2.setImageResource(R.drawable.dot_inactive)
+                    dot3.setImageResource(R.drawable.dot_inactive)
+                } else if (position == 1) {
+                    dot1.setImageResource(R.drawable.dot_inactive)
+                    dot2.setImageResource(R.drawable.dot_active)
+                    dot3.setImageResource(R.drawable.dot_inactive)
+                } else if (position == 2) {
+                    dot1.setImageResource(R.drawable.dot_inactive)
+                    dot2.setImageResource(R.drawable.dot_inactive)
+                    dot3.setImageResource(R.drawable.dot_active)
+                }
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {
+                // No se llama automáticamente, solo se llama cuando se está cambiando el estado de scroll
+            }
+        })
     }
 
     private fun initUI() {

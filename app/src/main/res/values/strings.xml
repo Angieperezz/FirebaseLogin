@@ -54,7 +54,7 @@
     <string name="signin_footer_selected">Inicia sesión</string>
     <string name="signin_error_dialog_title">Ha ocurrido un error</string>
     <string name="signin_error_dialog_body">No hemos podido crear tu cuenta, inténtalo de nuevo más tarde</string>
-    <string name="signin_error_dialog_positive_action">Okey :(</string>
+    <string name="signin_error_dialog_positive_action">Okey </string>
 
     <string name="verification_button_go_to_nuwe">Vamos a Binkio</string>
     <string name="verification_check_mail">Revisa tu correo electrónico para recuperar tu contraseña (recuerda mirar en SPAM).</string>

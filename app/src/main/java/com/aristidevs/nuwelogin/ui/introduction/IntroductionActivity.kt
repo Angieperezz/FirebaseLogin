@@ -71,10 +71,7 @@ class IntroductionActivity : AppCompatActivity() {
             }
 
             override fun onPageSelected(position: Int) {
-                // Aquí puedes obtener la posición actual
-                println("Current position: $position")
 
-                // Actualiza tus puntos de imagen aquí
                 if (position == 0) {
                     dot1.setImageResource(R.drawable.dot_active)
                     dot2.setImageResource(R.drawable.dot_inactive)

@@ -4,14 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.aristidevs.nuwelogin.R
 import com.aristidevs.nuwelogin.core.dialog.DialogFragmentLauncher
 import com.aristidevs.nuwelogin.core.dialog.ErrorDialog
 import com.aristidevs.nuwelogin.core.ex.show
-import com.aristidevs.nuwelogin.ui.resetPassword.ForgotPasswordEnterCodeValidationActivity
-import com.aristidevs.nuwelogin.ui.resetPassword.ForgotPasswordEnterNew
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import dagger.hilt.android.AndroidEntryPoint
@@ -51,14 +48,13 @@ class SignInActivityEnterData : AppCompatActivity(){
                     return
                 }
 
-                val pattern = Regex("\\+?\\d{1,3} ?\\(?\\d{3}\\)? ?\\d{4}") // Ejemplo: +1 (123) 456-7890
-
+                val pattern = Regex("\\d{13}") // Valida 13 dígitos
                 if (pattern.matches(text)) {
                     // El texto coincide con el patrón regular
                     etNumberPhone.error = null
                 } else {
                     // El texto no coincide con el patrón regular
-                    etNumberPhone.error = "Invalid phone number"
+                    etNumberPhone.error = "Número de teléfono inválido"
                 }
             }
         })
@@ -80,9 +76,12 @@ class SignInActivityEnterData : AppCompatActivity(){
         ErrorDialog.create(
             title = getString(R.string.signin_error_dialog_title),
             description = "Debe rellenar todos los campos",
-            positiveAction = ErrorDialog.Action(getString(R.string.signin_error_dialog_positive_action)) {
+            negativeAction = ErrorDialog.Action(getString(R.string.login_error_dialog_negative_action)) {
                 it.dismiss()
             }
+//            positiveAction = ErrorDialog.Action(getString(R.string.signin_error_dialog_positive_action)) {
+//                it.dismiss()
+//            }
         ).show(dialogLauncher, this)
     }
 

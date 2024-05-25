@@ -3,10 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
-    android:paddingHorizontal="32dp"
+    android:layout_height="100dp"
     android:background="@color/errorDialog"
-    android:paddingVertical="16dp">
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_error"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="21dp"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvTitle"
@@ -15,9 +25,10 @@
         android:textSize="12sp"
         android:fontFamily="@font/poppins_regular"
         android:textColor="@color/secondary_light"
-        android:layout_marginTop="16dp"
+
         android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:text="Título" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -32,31 +43,47 @@
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         tools:text="Body" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/btnPositive"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:textSize="12sp"
-        android:fontFamily="@font/poppins_regular"
-        android:textColor="@color/secondary_light"
-        android:layout_marginTop="16dp"
-        tools:text=":Reintentar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+    <ImageView
+        android:id="@+id/imageViewCancelable"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/ic_close"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_marginEnd="21dp"
+        android:focusable="true" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/btnNegative"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="16dp"
-        android:textSize="12sp"
-        android:fontFamily="@font/poppins_regular"
-        android:textColor="@color/secondary_light"
-        tools:text=":Cancelar"
-        app:layout_constraintEnd_toStartOf="@+id/btnPositive"
-        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/btnPositive"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="16dp"-->
+<!--        android:textSize="12sp"-->
+<!--        android:visibility="gone"-->
+<!--        android:fontFamily="@font/poppins_regular"-->
+<!--        android:textColor="@color/secondary_light"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        tools:text=":Reintentar"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/btnNegative"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="16dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:textSize="12sp"-->
+<!--        android:fontFamily="@font/poppins_regular"-->
+<!--        android:textColor="@color/secondary_light"-->
+<!--        tools:text=":Cancelar"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/btnPositive"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

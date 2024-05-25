@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.inputmethod.EditorInfo
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.aristidevs.nuwelogin.R
 import com.aristidevs.nuwelogin.core.dialog.DialogFragmentLauncher
@@ -17,9 +16,7 @@ import com.aristidevs.nuwelogin.databinding.ActivityLoginBinding
 import com.aristidevs.nuwelogin.ui.login.model.UserLogin
 import com.aristidevs.nuwelogin.ui.resetPassword.ForgotPasswordActivity
 import com.aristidevs.nuwelogin.ui.signin.SignInActivity
-import com.aristidevs.nuwelogin.ui.verification.VerificationActivity
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
 
 
@@ -138,13 +135,14 @@ class LoginActivity : AppCompatActivity() {
             description = getString(R.string.login_error_dialog_body),
             negativeAction = ErrorDialog.Action(getString(R.string.login_error_dialog_negative_action)) {
                 it.dismiss()
-            },
-            positiveAction = ErrorDialog.Action(getString(R.string.login_error_dialog_positive_action)) {
-                loginViewModel.onLoginSelected(
-                    userLogin.email,
-                    userLogin.password
-                )
-                it.dismiss()
+
+//            ,
+//            positiveAction = ErrorDialog.Action(getString(R.string.login_error_dialog_positive_action)) {
+//                loginViewModel.onLoginSelected(
+//                    userLogin.email,
+//                    userLogin.password
+//                )
+//                it.dismiss()
             }
         ).show(dialogLauncher, this)
     }
@@ -155,10 +153,10 @@ class LoginActivity : AppCompatActivity() {
             description = getString(R.string.login_error_dialog_body),
             negativeAction = ErrorDialog.Action(getString(R.string.login_error_dialog_negative_action)) {
                 it.dismiss()
-            },
-            positiveAction = ErrorDialog.Action(getString(R.string.login_error_dialog_positive_action)) {
-                it.dismiss()
             }
+//            positiveAction = ErrorDialog.Action(getString(R.string.login_error_dialog_positive_action)) {
+//                it.dismiss()
+//            }
         ).show(dialogLauncher, this)
     }
 

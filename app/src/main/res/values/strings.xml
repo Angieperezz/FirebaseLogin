@@ -53,7 +53,7 @@
     <string name="signin_footer_unselected">¿Ya tienes cuenta?</string>
     <string name="signin_footer_selected">Inicia sesión</string>
     <string name="signin_error_dialog_title">Ha ocurrido un error</string>
-    <string name="signin_error_dialog_body">No hemos podido crear tu cuenta, inténtalo de nuevo más tarde</string>
+    <string name="signin_error_dialog_body">Las contraseñas no coinciden</string>
     <string name="signin_error_dialog_positive_action">Okey </string>
 
     <string name="verification_button_go_to_nuwe">Vamos a Binkio</string>

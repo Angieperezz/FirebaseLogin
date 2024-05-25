@@ -4,10 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.inputmethod.EditorInfo
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.aristidevs.nuwelogin.R
 import com.aristidevs.nuwelogin.core.dialog.DialogFragmentLauncher
@@ -15,14 +13,9 @@ import com.aristidevs.nuwelogin.core.dialog.ErrorDialog
 import com.aristidevs.nuwelogin.core.ex.*
 import com.aristidevs.nuwelogin.databinding.ActivitySignInBinding
 import com.aristidevs.nuwelogin.ui.login.LoginActivity
-import com.aristidevs.nuwelogin.ui.resetPassword.ForgotPasswordActivity
 import com.aristidevs.nuwelogin.ui.signin.model.UserSignIn
 import com.aristidevs.nuwelogin.ui.verification.VerificationActivity
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.textfield.TextInputEditText
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
-import java.util.Objects
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -89,7 +82,9 @@ class SignInActivity : AppCompatActivity() {
                 it.dismissKeyboard()
                 if(etEmail.length() == 0 || etPassword.length() == 0 || etPasswordRepeat.length() == 0) {
                     showErrorDialogEmpty()
-                }   else{
+                }   else if(etPassword.text.toString() != etPasswordRepeat.text.toString()){
+                    showErrorDialog()
+                }else  {
                     goToAskData()
                 }
 
@@ -145,9 +140,11 @@ class SignInActivity : AppCompatActivity() {
         ErrorDialog.create(
             title = getString(R.string.signin_error_dialog_title),
             description = getString(R.string.signin_error_dialog_body),
-            positiveAction = ErrorDialog.Action(getString(R.string.signin_error_dialog_positive_action)) {
-                it.dismiss()
-            }
+            negativeAction = ErrorDialog.Action(getString(R.string.login_error_dialog_negative_action)) {
+                it.dismiss()}
+//            positiveAction = ErrorDialog.Action(getString(R.string.signin_error_dialog_positive_action)) {
+//                it.dismiss()
+//            }
         ).show(dialogLauncher, this)
     }
 
@@ -155,9 +152,11 @@ class SignInActivity : AppCompatActivity() {
         ErrorDialog.create(
             title = getString(R.string.signin_error_dialog_title),
             description = "Todos los campos deben ser rellenados",
-            positiveAction = ErrorDialog.Action(getString(R.string.signin_error_dialog_positive_action)) {
-                it.dismiss()
-            }
+            negativeAction = ErrorDialog.Action(getString(R.string.login_error_dialog_negative_action)) {
+                it.dismiss()}
+//            positiveAction = ErrorDialog.Action(getString(R.string.signin_error_dialog_positive_action)) {
+//                it.dismiss()
+//            }
         ).show(dialogLauncher, this)
     }
 

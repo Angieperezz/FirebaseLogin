@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-import androidx.core.view.isGone
 import androidx.fragment.app.DialogFragment
 import com.aristidevs.nuwelogin.databinding.DialogErrorBinding
 
@@ -18,7 +17,7 @@ class ErrorDialog : DialogFragment() {
     private var title: String = ""
     private var description: String = ""
     private var isDialogCancelable: Boolean = true
-    private var positiveAction: Action = Action.Empty
+    //private var positiveAction: Action = Action.Empty
     private var negativeAction: Action = Action.Empty
 
     companion object {
@@ -26,14 +25,14 @@ class ErrorDialog : DialogFragment() {
             title: String = "",
             description: String = "",
             isDialogCancelable: Boolean = true,
-            positiveAction: Action = Action.Empty,
-            negativeAction: Action = Action.Empty,
+            //positiveAction: Action = Action.Empty,
+          negativeAction: Action = Action.Empty,
         ): ErrorDialog = ErrorDialog().apply {
             this.title = title
             this.description = description
             this.isDialogCancelable = isDialogCancelable
-            this.positiveAction = positiveAction
-            this.negativeAction = negativeAction
+           // this.positiveAction = positiveAction
+           this.negativeAction = negativeAction
         }
     }
 
@@ -53,13 +52,16 @@ class ErrorDialog : DialogFragment() {
         binding.tvTitle.text = title
         binding.tvDescription.text = description
         if (negativeAction == Action.Empty) {
-            binding.btnNegative.isGone = true
+          //  binding.btnNegative.isGone = true
         } else {
-            binding.btnNegative.text = negativeAction.text
-            binding.btnNegative.setOnClickListener { negativeAction.onClickListener(this) }
+           //binding.btnNegative.text = negativeAction.text
+            binding.imageViewCancelable.setOnClickListener{
+                negativeAction.onClickListener(this)
+            }
+           // binding.btnNegative.setOnClickListener { negativeAction.onClickListener(this) }
         }
-        binding.btnPositive.text = positiveAction.text
-        binding.btnPositive.setOnClickListener { positiveAction.onClickListener(this) }
+//        binding.btnPositive.text = positiveAction.text
+//        binding.btnPositive.setOnClickListener { positiveAction.onClickListener(this) }
         isCancelable = isDialogCancelable
 
         return AlertDialog.Builder(requireActivity())

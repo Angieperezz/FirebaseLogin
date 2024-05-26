@@ -73,4 +73,11 @@
     <string name="remember_me_text">Recuerdame</string>
     <string name="physic_person">Soy persona física \n\nDesempeña una actividad económica bajo \nel ejercicio independiente de una profesión</string>
     <string name="moral_person">Soy persona moral \n\nDesempeña una actividad económica a traves \nde una sociedad comercial(Dueño de empresa)</string>
+    <string name="wallet">Wallet</string>
+    <string name="marketplace">Marketplace</string>
+    <string name="home" />
+    <string name="history">Historial</string>
+    <string name="profile">Perfil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

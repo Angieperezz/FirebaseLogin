@@ -43,6 +43,10 @@ class SignInResultValidationCode: AppCompatActivity() {
         } else if(codeIntroducedEmail == "1234" && isUserEmailCode){
             imageView.setImageResource(R.drawable.success_check)
             textView.text = ("Hemos confirmado correctamente tu \ncorreo electrónico")
+            btnNext.setOnClickListener{
+                val intent = Intent(this, DashboardActivity::class.java)
+                startActivity(intent)
+            }
         } else if(codeIntroduced == "" || codeIntroducedEmail == "" || codeIntroducedEmail != "1234"|| codeIntroduced != "1234"){
            //imageView.setBackgroundColor(getResources().getColor(R.color.errorBackground))
            imageView.setImageResource(R.drawable.checkmark_error)

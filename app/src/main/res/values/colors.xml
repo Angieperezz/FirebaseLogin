@@ -9,9 +9,11 @@
 
     <color name="secondary_dark">#CDCDCD</color>
     <color name="secondary">#F0F0F0</color>
+    <color name="secondaryTest">#ee9361</color>
     <color name="secondary_light">#FFFFFF</color>
     <color name="secondary_light_60">#E4E7EB</color>
     <color name="card_view_selected">#E8E0FF</color>
+    <color name="item_selected">#E9E2FF</color>
 
     <color name="background">#232730</color>
     <color name="background_dark">#1B1D29</color>

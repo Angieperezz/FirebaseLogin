@@ -155,4 +155,9 @@
         <item name="errorTextColor">@color/error</item>
         <item name="hintTextColor">@color/black</item>
     </style>
+
+    <style name="MyBottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/primary</item>
+        <item name="itemBackground">@color/item_selected</item>
+    </style>
 </resources>

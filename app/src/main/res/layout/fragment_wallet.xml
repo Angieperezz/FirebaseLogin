@@ -341,7 +341,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="460dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
@@ -351,13 +351,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/border_background"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/matic"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
-                android:background="@drawable/border_background"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="6dp"
                 app:icon="@drawable/ic_matic"
                 app:iconGravity="textStart"
                 app:iconSize="24dp"
@@ -365,26 +369,86 @@
                 app:iconPadding="10dp"
                 android:text="Matic" />
 
-            <TextView
+
+            <View
+                android:id="@+id/divider_view1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/divider_frame" />
+
+            <TextView
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="6dp"
+                app:icon="@drawable/ic_matic"
+                app:iconGravity="textStart"
+                app:iconSize="24dp"
+                app:iconTint="@null"
+                app:iconPadding="10dp"
                 android:text="USDT" />
 
-            <TextView
+            <View
+                android:id="@+id/divider_view2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="WBTC" />
+                android:layout_height="1dp"
+                android:background="@color/divider_frame" />
 
             <TextView
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ETH" />
+                android:layout_height="46dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="6dp"
+                app:icon="@drawable/ic_matic"
+                app:iconGravity="textStart"
+                app:iconSize="24dp"
+                app:iconTint="@null"
+                app:iconPadding="10dp"
+                android:text="WBTC" />
+
+            <View
+                android:id="@+id/divider_view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_frame" />
+
+            <TextView
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="6dp"
+                app:icon="@drawable/ic_matic"
+                app:iconGravity="textStart"
+                app:iconSize="24dp"
+                app:iconTint="@null"
+                app:iconPadding="10dp"
+                android:text="ETH"/>
+
+            <View
+                android:id="@+id/divider_view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_frame" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                style="@style/SecondaryButton"
+                android:layout_width="235dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Ver mas"
+         />
 
         </LinearLayout>
 
+
+
     </ScrollView>
-
-
-
 
 </FrameLayout>

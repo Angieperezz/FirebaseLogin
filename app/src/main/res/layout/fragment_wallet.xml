@@ -52,5 +52,99 @@
         android:layout_height="wrap_content"
         />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/container_view"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <TextView
+            android:id="@+id/text_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="21dp"
+            android:text="Balance total"
+            android:textSize="18sp"
+            android:textColor="@color/primary"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/amountTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="21dp"
+            android:text="$16,900USD = 20,000 MXN"
+            android:textSize="18sp"
+            android:textColor="@color/primary"
+            android:fontFamily="@font/poppins_semi_bold"
+            app:layout_constraintTop_toBottomOf="@+id/text_balance"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/amountTextView"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:background="@drawable/border_background"
+                android:textColor="@color/colorPrimaryButton"
+                android:id="@+id/btn_send"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:textSize="8sp"
+                android:text="Enviar" />
+
+            <com.google.android.material.button.MaterialButton
+                android:background="@drawable/border_background"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorPrimaryButton"
+                android:id="@+id/btn_receive"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:textSize="8sp"
+                android:text="Recibir" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/frame_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            style="@style/SecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="152dp"
+            android:background="@color/primary"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </androidx.cardview.widget.CardView>
+
+
+   
 
 </FrameLayout>

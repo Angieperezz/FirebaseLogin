@@ -100,7 +100,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="21dp"
-                    android:layout_marginTop="21dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/poppins_semi_bold"
                     android:text="$16,900USD = 20,000 MXN"
                     android:textColor="@color/primary"
@@ -110,6 +110,7 @@
 
                 <LinearLayout
                     android:layout_width="145dp"
+                    android:layout_marginTop="15dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
                     android:orientation="horizontal"
@@ -214,8 +215,8 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="10dp"
                             android:src="@drawable/ic_dollar" />
@@ -257,8 +258,8 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="10dp"
                             android:src="@drawable/ic_pesos" />
@@ -376,8 +377,8 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
                         android:layout_marginTop="5dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="10dp"
@@ -440,6 +441,7 @@
                             android:textSize="9sp" />
 
                     </LinearLayout>
+
                 </LinearLayout>
 
 
@@ -451,64 +453,244 @@
                     android:layout_marginTop="10dp"
                     android:background="@color/divider_frame" />
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="46dp"
-                    android:layout_marginStart="21dp"
-                    android:layout_marginTop="6dp"
-                    android:fontFamily="@font/poppins_bold"
-                    android:text="USDT"
-                    android:textColor="@color/black"
-                    app:icon="@drawable/ic_matic"
-                    app:iconGravity="textStart"
-                    app:iconPadding="10dp"
-                    app:iconSize="24dp"
-                    app:iconTint="@null" />
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/ic_usdt" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/usdt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="USDT"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/amountUSDT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Tether"
+                            android:textColor="@color/black"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="3dp"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/usdtAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:text="1,000 MXN"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/amountHintUsdt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="= $61.00 USD"
+                            android:textColor="@color/black"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
 
                 <View
                     android:id="@+id/divider_view2"
-                    android:layout_width="match_parent"
+                    android:layout_width="300dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
                     android:background="@color/divider_frame" />
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="46dp"
-                    android:layout_marginStart="21dp"
-                    android:layout_marginTop="6dp"
-                    android:fontFamily="@font/poppins_bold"
-                    android:text="WBTC"
-                    android:textColor="@color/black"
-                    app:icon="@drawable/ic_matic"
-                    app:iconGravity="textStart"
-                    app:iconPadding="10dp"
-                    app:iconSize="24dp"
-                    app:iconTint="@null" />
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/ic_wbtc" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/wbtc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="WBTC"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/amountWBTC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Bitcoin"
+                            android:textColor="@color/black"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="3dp"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/wbtcAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:text="1,000 MXN"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/amountHintWbtc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="= $61.00 USD"
+                            android:textColor="@color/black"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
 
                 <View
                     android:id="@+id/divider_view3"
-                    android:layout_width="match_parent"
+                    android:layout_width="300dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
                     android:background="@color/divider_frame" />
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="46dp"
-                    android:layout_marginStart="21dp"
-                    android:layout_marginTop="6dp"
-                    android:fontFamily="@font/poppins_bold"
-                    android:text="ETH"
-                    android:textColor="@color/black"
-                    app:icon="@drawable/ic_matic"
-                    app:iconGravity="textStart"
-                    app:iconPadding="10dp"
-                    app:iconSize="24dp"
-                    app:iconTint="@null" />
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/ic_eth" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/eth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="ETH"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/amountEth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Ethereum"
+                            android:textColor="@color/black"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="3dp"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ethAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:text="1,000 MXN"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/amountHintEth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="= $61.00 USD"
+                            android:textColor="@color/black"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
 
                 <View
                     android:id="@+id/divider_view4"
-                    android:layout_width="match_parent"
+                    android:layout_width="300dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
                     android:background="@color/divider_frame" />
 
                 <com.google.android.material.button.MaterialButton

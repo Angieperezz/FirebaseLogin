@@ -26,12 +26,6 @@ class WalletFragment : Fragment() {
         horizontalScrollView = binding.frameValues.findViewById(R.id.frameValues)
         horizontalScrollView.isHorizontalScrollBarEnabled = false
 
-        val textView = binding.matic
-        val icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_matic) // Reemplaza 'R.drawable.your_icon' con el ID de tu icono
-        if (icon != null) {
-            icon.setBounds(0, 0, icon.getIntrinsicWidth(), icon.getIntrinsicHeight())
-        }
-        textView.setCompoundDrawables(icon, null, null, null)
         return binding.root
 
 

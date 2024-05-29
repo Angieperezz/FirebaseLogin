@@ -80,4 +80,18 @@
     <string name="profile">Perfil</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="amount_euros">$1,000 EUR</string>
+    <string name="title_euros">Euros digitales</string>
+    <string name="title_dollars">Dolares digitales</string>
+    <string name="amount_dollars">$1,000 USD</string>
+    <string name="buy_button">Comprar</string>
+    <string name="nfts_title">NFTs</string>
+    <string name="sell_button">Vender</string>
+    <string name="matic_title">Matic</string>
+    <string name="amount_pesos">$1,000 MXN</string>
+    <string name="pesos_title">Pesos Mexicanos</string>
+    <string name="amount_hint_dollars">= $61.00 USD</string>
+    <string name="view_more">Ver más</string>
+    <string name="last_transaction">Ultima transacción</string>
+    <string name="go_to_marketplace">Ir a Marketplace</string>
 </resources>

@@ -419,7 +419,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="30dp"
                         android:layout_marginTop="3dp"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:orientation="vertical">
 
                         <TextView
@@ -481,7 +481,7 @@
                             android:textColor="@color/black"
                             android:layout_marginTop="15dp"
                             android:fontFamily="@font/poppins_medium"
-                            android:text="USDT"
+                            android:text="@string/usdt_title"
                             android:textSize="16sp" />
 
                         <TextView
@@ -501,7 +501,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="30dp"
                         android:layout_marginTop="3dp"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:orientation="vertical">
 
                         <TextView
@@ -561,7 +561,7 @@
                             android:textColor="@color/black"
                             android:layout_marginTop="15dp"
                             android:fontFamily="@font/poppins_medium"
-                            android:text="WBTC"
+                            android:text="@string/wbtc_title"
                             android:textSize="16sp" />
 
                         <TextView
@@ -569,7 +569,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_regular"
-                            android:text="Bitcoin"
+                            android:text="@string/bitcoin_title"
                             android:textColor="@color/black"
                             android:textSize="9sp" />
 
@@ -581,7 +581,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="30dp"
                         android:layout_marginTop="3dp"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:orientation="vertical">
 
                         <TextView
@@ -641,7 +641,7 @@
                             android:textColor="@color/black"
                             android:layout_marginTop="15dp"
                             android:fontFamily="@font/poppins_medium"
-                            android:text="ETH"
+                            android:text="@string/eth_title"
                             android:textSize="16sp" />
 
                         <TextView
@@ -649,7 +649,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_regular"
-                            android:text="Ethereum"
+                            android:text="@string/ethereum_title"
                             android:textColor="@color/black"
                             android:textSize="9sp" />
 
@@ -661,7 +661,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="30dp"
                         android:layout_marginTop="3dp"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:orientation="vertical">
 
                         <TextView

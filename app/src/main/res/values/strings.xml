@@ -94,4 +94,9 @@
     <string name="view_more">Ver más</string>
     <string name="last_transaction">Ultima transacción</string>
     <string name="go_to_marketplace">Ir a Marketplace</string>
+    <string name="usdt_title">USDT</string>
+    <string name="wbtc_title">WBTC</string>
+    <string name="bitcoin_title">Bitcoin</string>
+    <string name="eth_title">ETH</string>
+    <string name="ethereum_title">Ethereum</string>
 </resources>

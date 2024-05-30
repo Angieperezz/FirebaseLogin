@@ -104,4 +104,6 @@
     <string name="movements">Movimientos</string>
     <string name="my_wallet_title">Mi wallet</string>
     <string name="total_balance">Balance total</string>
+    <string name="send_text">Enviar</string>
+    <string name="solicit_text">Solicita</string>
 </resources>

@@ -332,6 +332,7 @@
     </HorizontalScrollView>
 
     <LinearLayout
+        android:id="@+id/actionButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -370,6 +371,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/textButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -385,7 +387,7 @@
             android:layout_marginTop="26dp"
             android:gravity="center"
             android:fontFamily="@font/poppins_light"
-            android:text="Solicita"
+            android:text="@string/solicit_text"
             android:textColor="@color/black"
             android:textSize="11sp" />
 
@@ -397,7 +399,7 @@
             android:layout_marginTop="26dp"
             android:gravity="center"
             android:fontFamily="@font/poppins_light"
-            android:text="Enviar"
+            android:text="@string/send_text"
             android:textColor="@color/black"
             android:textSize="11sp" />
 

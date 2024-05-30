@@ -5,8 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.HorizontalScrollView
-import androidx.core.content.ContextCompat
-import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import com.aristidevs.nuwelogin.R
 import com.aristidevs.nuwelogin.databinding.FragmentWalletBinding
@@ -15,17 +13,13 @@ class WalletFragment : Fragment() {
 
         private var _binding: FragmentWalletBinding? = null
         private val binding get() = _binding!!
-    private lateinit var scrollView: NestedScrollView
-
-    private lateinit var horizontalScrollView: HorizontalScrollView
+        private lateinit var horizontalScrollView: HorizontalScrollView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentWalletBinding.inflate(layoutInflater, container, false)
-        scrollView = binding.nestedScrollview.findViewById(R.id.nestedScrollview)
-        scrollView.isNestedScrollingEnabled = true
 
         horizontalScrollView = binding.frameValues.findViewById(R.id.frameValues)
         horizontalScrollView.isHorizontalScrollBarEnabled = false

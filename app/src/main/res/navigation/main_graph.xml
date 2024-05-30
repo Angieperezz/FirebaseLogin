@@ -3,7 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/walletFragment">
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.aristidevs.nuwelogin.ui.dashboard.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/walletFragment"
@@ -16,11 +22,6 @@
         android:name="com.aristidevs.nuwelogin.ui.dashboard.MarketplaceFragment"
         android:label="fragment_marketplace"
         tools:layout="@layout/fragment_marketplace" />
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.aristidevs.nuwelogin.ui.dashboard.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/historyFragment"
         android:name="com.aristidevs.nuwelogin.ui.dashboard.HistoryFragment"

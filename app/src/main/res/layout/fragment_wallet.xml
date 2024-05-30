@@ -7,789 +7,323 @@
     tools:context=".ui.dashboard.WalletFragment">
 
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollview"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
 
-        <!-- Add the content here -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/iconPerson"
+            style="@style/SecondaryButton"
+            android:layout_width="48dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            app:icon="@drawable/ic_person"
+            app:iconGravity="textStart"
+            app:iconPadding="10dp"
+            app:iconSize="40dp"
+            app:iconTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNotification"
+            style="@style/SecondaryButton"
+            android:layout_width="30dp"
+            android:layout_height="33dp"
+            android:background="@color/primary"
+            app:icon="@drawable/ic_notifications"
+            app:iconGravity="textTop"
+            app:iconPadding="10dp"
+            app:iconSize="24dp"
+            app:iconTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/viewHeader"
+            layout="@layout/view_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/myWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:layout_constraintTop_toBottomOf="@+id/iconPerson"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/my_wallet_title"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
         <LinearLayout
+            app:layout_constraintTop_toBottomOf="@+id/myWallet"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/iconPerson"
-                    style="@style/SecondaryButton"
-                    android:layout_width="48dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="30dp"
-                    android:background="@null"
-                    app:icon="@drawable/ic_person"
-                    app:iconGravity="textStart"
-                    app:iconPadding="10dp"
-                    app:iconSize="40dp"
-                    app:iconTint="@null"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnNotification"
-                    style="@style/SecondaryButton"
-                    android:layout_width="30dp"
-                    android:layout_height="33dp"
-                    android:layout_marginEnd="30dp"
-                    android:background="@color/primary"
-                    app:icon="@drawable/ic_notifications"
-                    app:iconGravity="textTop"
-                    app:iconPadding="10dp"
-                    app:iconSize="24dp"
-                    app:iconTint="@null"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <include
-                    android:id="@+id/viewHeader"
-                    layout="@layout/view_header"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/helloPerson"
+            <com.google.android.material.button.MaterialButton
+                style="@style/SecondaryButton"
+                android:id="@+id/actions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
                 android:layout_marginTop="26dp"
                 android:fontFamily="@font/poppins_semi_bold"
-                android:text="Hola, Alfredo"
+                android:text="@string/actions"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/containerView"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginStart="30dp"
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1dp"
+                android:layout_height="25dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/container_view">
-
-                <TextView
-                    android:id="@+id/text_balance"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="21dp"
-                    android:layout_marginTop="21dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Balance total"
-                    android:textColor="@color/primary"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/amountTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="21dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:text="$16,900USD = 20,000 MXN"
-                    android:textColor="@color/primary"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_balance" />
-
-                <LinearLayout
-                    android:layout_width="145dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/amountTextView">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btn_send"
-                        android:layout_width="40dp"
-                        android:layout_height="35dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_background"
-                        android:text="Enviar"
-                        android:textColor="@color/colorPrimaryButton"
-                        android:textSize="8sp" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btn_receive"
-                        android:layout_width="40dp"
-                        android:layout_height="35dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_background"
-                        android:text="Recibir"
-                        android:textColor="@color/colorPrimaryButton"
-                        android:textSize="8sp" />
-
-                </LinearLayout>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <HorizontalScrollView
-                android:id="@+id/frameValues"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="27dp"
-                android:layout_marginEnd="30dp"
-                android:fillViewport="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/containerView">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/primary"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:id="@+id/card_euros"
-                        android:layout_width="185dp"
-                        android:layout_height="88dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/background_item_selected"
-                        android:elevation="5dp"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginStart="10dp"
-                            android:contentDescription="TODO"
-                            android:src="@drawable/ic_euro" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:fontFamily="@font/poppins_light"
-                                android:text="@string/title_euros"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/amount"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:fontFamily="@font/poppins_semi_bold"
-                                android:text="@string/amount_euros"
-                                android:textColor="@color/black"
-                                android:textSize="16sp" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/card_dollar"
-                        android:layout_width="185dp"
-                        android:layout_height="88dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/background_item_selected"
-                        android:elevation="5dp"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginStart="10dp"
-                            android:src="@drawable/ic_dollar" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:fontFamily="@font/poppins_light"
-                                android:text="@string/title_dollars"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/amountDollar"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:fontFamily="@font/poppins_semi_bold"
-                                android:text="@string/amount_dollars"
-                                android:textColor="@color/black"
-                                android:textSize="16sp" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/card_pesos"
-                        android:layout_width="185dp"
-                        android:layout_height="88dp"
-                        android:background="@drawable/background_item_selected"
-                        android:elevation="5dp"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginStart="10dp"
-                            android:src="@drawable/ic_pesos" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:fontFamily="@font/poppins_light"
-                                android:text="@string/pesos_title"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/amount2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:fontFamily="@font/poppins_semi_bold"
-                                android:text="@string/amount_pesos"
-                                android:textColor="@color/black"
-                                android:textSize="16sp" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </HorizontalScrollView>
-
-
-            <LinearLayout
-                android:id="@+id/buttonFrame"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="31dp"
-                android:layout_marginEnd="30dp"
-                android:orientation="horizontal">
+                android:background="@color/divider_frame" />
 
-
-                <TextView
-                    android:id="@+id/text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="17dp"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:gravity="center_vertical"
-                    android:text="Tokens"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/amountTextVie"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="40dp"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:gravity="center_vertical"
-                    android:text="@string/nfts_title"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <com.google.android.material.button.MaterialButton
-                    style="@style/PrimaryButton"
-                    android:layout_width="60dp"
-                    android:layout_height="35dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/container_view"
-                    android:fontFamily="@font/poppins_bold"
-                    android:text="@string/buy_button"
-                    android:textColor="@color/primary"
-                    android:textSize="10sp" />
-
-                <com.google.android.material.button.MaterialButton
-                    style="@style/PrimaryButton"
-                    android:layout_width="60dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/container_view"
-                    android:fontFamily="@font/poppins_bold"
-                    android:text="@string/sell_button"
-                    android:textColor="@color/primary"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/cryptoItems"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/border_background"
-                android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@+id/containerView2">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_matic" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/matic"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="15dp"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="@string/matic_title"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/amountHint"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/matic_title"
-                            android:textColor="@color/black"
-                            android:textSize="9sp" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginTop="3dp"
-                        android:gravity="end"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/maticAmount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="15dp"
-                            android:fontFamily="@font/poppins_semi_bold"
-                            android:text="@string/amount_pesos"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:id="@+id/amountHintMatic"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/amount_hint_dollars"
-                            android:textColor="@color/black"
-                            android:textSize="9sp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-                <View
-                    android:id="@+id/divider_view1"
-                    android:layout_width="300dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/divider_frame" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10dp"
-                        android:contentDescription="TODO"
-                        android:src="@drawable/ic_usdt" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/usdt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="15dp"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="@string/usdt_title"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/amountUSDT"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Tether"
-                            android:textColor="@color/black"
-                            android:textSize="9sp" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginTop="3dp"
-                        android:gravity="end"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/usdtAmount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="15dp"
-                            android:fontFamily="@font/poppins_semi_bold"
-                            android:text="@string/amount_pesos"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:id="@+id/amountHintUsdt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/amount_hint_dollars"
-                            android:textColor="@color/black"
-                            android:textSize="9sp" />
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <View
-                    android:id="@+id/divider_view2"
-                    android:layout_width="300dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/divider_frame" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10dp"
-                        android:contentDescription="TODO"
-                        android:src="@drawable/ic_wbtc" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/wbtc"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="15dp"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="@string/wbtc_title"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/amountWBTC"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/bitcoin_title"
-                            android:textColor="@color/black"
-                            android:textSize="9sp" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginTop="3dp"
-                        android:gravity="end"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/wbtcAmount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="15dp"
-                            android:fontFamily="@font/poppins_semi_bold"
-                            android:text="@string/amount_pesos"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:id="@+id/amountHintWbtc"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/amount_hint_dollars"
-                            android:textColor="@color/black"
-                            android:textSize="9sp" />
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <View
-                    android:id="@+id/divider_view3"
-                    android:layout_width="300dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/divider_frame" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10dp"
-                        android:contentDescription="TODO"
-                        android:src="@drawable/ic_eth" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/eth"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="15dp"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="@string/eth_title"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/amountEth"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/ethereum_title"
-                            android:textColor="@color/black"
-                            android:textSize="9sp" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginTop="3dp"
-                        android:gravity="end"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/ethAmount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="15dp"
-                            android:fontFamily="@font/poppins_semi_bold"
-                            android:text="@string/amount_pesos"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:id="@+id/amountHintEth"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/amount_hint_dollars"
-                            android:textColor="@color/black"
-                            android:textSize="9sp" />
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <View
-                    android:id="@+id/divider_view4"
-                    android:layout_width="300dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/divider_frame" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLogin"
-                    style="@style/SecondaryButton"
-                    android:layout_width="235dp"
-                    android:layout_height="44dp"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/view_more" />
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/lastTrans"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/myActives"
+                style="@style/SecondaryButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
+
                 android:layout_marginTop="26dp"
                 android:fontFamily="@font/poppins_semi_bold"
-                android:text="@string/last_transaction"
+                android:text="@string/my_actives"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/containerView1"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/background_item_selected">
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/divider_frame" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/movements"
+                style="@style/SecondaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/movements"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/container_view_without_color">
+
+        <TextView
+            android:id="@+id/text_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/total_balance"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/amountTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="$16,900USD = 20,000 MXN"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_balance" />
+
+        <LinearLayout
+            android:layout_width="145dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amountTextView">
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <HorizontalScrollView
+        android:id="@+id/frameValues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="410dp"
+        android:layout_marginEnd="30dp"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/card_euros"
+                android:layout_width="185dp"
+                android:layout_height="88dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_item_selected"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_euro" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/containerView1"
-                    android:orientation="horizontal">
-
-                <View
-                    android:id="@+id/divider_view5"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/divider_frame"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/containerView1" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnViewMore"
-                    style="@style/SecondaryButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/containerView1"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/view_more" />
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="@string/title_euros"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="@string/amount_euros"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="31dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginStart="30dp"
+                android:id="@+id/card_dollar"
+                android:layout_width="185dp"
+                android:layout_height="88dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_item_selected"
+                android:elevation="5dp"
                 android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:fontFamily="@font/poppins_semi_bold"
-                android:text="Explora nuevas propiedades"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_dollar" />
 
-                <com.google.android.material.button.MaterialButton
-                    style="@style/PrimaryButton"
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="15dp"
-                    android:background="@drawable/container_view"
-                    android:fontFamily="@font/poppins_bold"
-                    android:text="@string/go_to_marketplace"
-                    android:textColor="@color/primary"
-                    android:layout_marginBottom="400dp"
-                    android:textSize="10sp" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="@string/title_dollars"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/amountDollar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="@string/amount_dollars"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card_pesos"
+                android:layout_width="185dp"
+                android:layout_height="88dp"
+                android:background="@drawable/background_item_selected"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_pesos" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="@string/pesos_title"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/amount2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="@string/amount_pesos"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
-
+    </HorizontalScrollView>
 
 </FrameLayout>

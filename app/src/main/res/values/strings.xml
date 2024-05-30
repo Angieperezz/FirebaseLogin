@@ -99,4 +99,9 @@
     <string name="bitcoin_title">Bitcoin</string>
     <string name="eth_title">ETH</string>
     <string name="ethereum_title">Ethereum</string>
+    <string name="actions">Acciones</string>
+    <string name="my_actives">Mis activos</string>
+    <string name="movements">Movimientos</string>
+    <string name="my_wallet_title">Mi wallet</string>
+    <string name="total_balance">Balance total</string>
 </resources>

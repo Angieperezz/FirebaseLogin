@@ -49,8 +49,12 @@ class WalletFragment : Fragment() {
             binding.textButtons.visibility = View.VISIBLE
             binding.dot3.visibility = View.INVISIBLE
             binding.dot2.visibility = View.INVISIBLE
+            binding.buttonFrame.visibility = View.GONE
+            binding.cryptoItems.visibility = View.GONE
         }
         myActives.setOnClickListener {
+            binding.buttonFrame.visibility = View.VISIBLE
+            binding.cryptoItems.visibility = View.VISIBLE
             binding.dot2.visibility = View.VISIBLE
             binding.dot1.visibility = View.INVISIBLE
             binding.dot3.visibility = View.INVISIBLE
@@ -69,6 +73,8 @@ class WalletFragment : Fragment() {
             binding.cardLayout.visibility = View.GONE
             binding.actionButtons.visibility = View.GONE
             binding.textButtons.visibility = View.GONE
+            binding.buttonFrame.visibility = View.GONE
+            binding.cryptoItems.visibility = View.GONE
         }
     }
 

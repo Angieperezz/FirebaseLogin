@@ -492,7 +492,7 @@
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/text"
+            android:id="@+id/tokenButton"
             style="@style/PrimaryButton"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
@@ -500,13 +500,13 @@
             android:fontFamily="@font/poppins_semi_bold"
             android:gravity="center_vertical"
             android:text="Tokens"
-            android:textColor="@color/black"
+            android:textColor="@color/primary"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/amountTextVie"
+            android:id="@+id/nftButton"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"

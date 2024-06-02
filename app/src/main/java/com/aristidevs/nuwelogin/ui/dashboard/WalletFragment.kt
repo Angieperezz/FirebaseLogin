@@ -1,5 +1,6 @@
 package com.aristidevs.nuwelogin.ui.dashboard
 
+import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,11 +19,10 @@ class WalletFragment : Fragment() {
         private lateinit var actions: MaterialButton
         private lateinit var myActives: MaterialButton
         private lateinit var movements: MaterialButton
+        private lateinit var tokenBtn: MaterialButton
+        private lateinit var nftButton: MaterialButton
 
-        //dividers
-        private lateinit var divider1: View
-        private lateinit var divider2: View
-        private lateinit var divider3: View
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -37,8 +37,9 @@ class WalletFragment : Fragment() {
         actions = binding.actions.findViewById(R.id.actions)
         myActives = binding.myActives.findViewById(R.id.myActives)
         movements = binding.movements.findViewById(R.id.movements)
+        tokenBtn = binding.tokenButton.findViewById(R.id.tokenButton)
+        nftButton = binding.nftButton.findViewById(R.id.nftButton)
 
-        divider1 = binding.dividerViewView3
         initListeners()
 
         return binding.root
@@ -117,6 +118,34 @@ class WalletFragment : Fragment() {
 
 
         }
+
+        nftButton.setOnClickListener {
+            tokenBtn?.let {
+                it.setTextColor(getResources().getColor(R.color.black))
+                tokenBtn.backgroundTintList = ColorStateList.valueOf(getResources().getColor(R.color.primary))
+
+            }
+            nftButton?.let {
+                it.setTextColor(getResources().getColor(R.color.primary))
+                nftButton.backgroundTintList = ColorStateList.valueOf(getResources().getColor(R.color.colorPrimaryButton))
+
+            }
+        }
+
+        tokenBtn.setOnClickListener {
+            nftButton?.let {
+                it.setTextColor(getResources().getColor(R.color.black))
+                nftButton.backgroundTintList = ColorStateList.valueOf(getResources().getColor(R.color.primary))
+
+            }
+            tokenBtn?.let {
+                it.setTextColor(getResources().getColor(R.color.primary))
+                it.backgroundTintList = ColorStateList.valueOf(getResources().getColor(R.color.colorPrimaryButton))
+
+            }
+        }
     }
+
+
 
 }

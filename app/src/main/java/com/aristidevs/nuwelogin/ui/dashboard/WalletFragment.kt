@@ -19,6 +19,11 @@ class WalletFragment : Fragment() {
         private lateinit var myActives: MaterialButton
         private lateinit var movements: MaterialButton
 
+        //dividers
+        private lateinit var divider1: View
+        private lateinit var divider2: View
+        private lateinit var divider3: View
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
@@ -32,6 +37,8 @@ class WalletFragment : Fragment() {
         actions = binding.actions.findViewById(R.id.actions)
         myActives = binding.myActives.findViewById(R.id.myActives)
         movements = binding.movements.findViewById(R.id.movements)
+
+        divider1 = binding.dividerViewView3
         initListeners()
 
         return binding.root
@@ -51,6 +58,14 @@ class WalletFragment : Fragment() {
             binding.dot2.visibility = View.INVISIBLE
             binding.buttonFrame.visibility = View.GONE
             binding.cryptoItems.visibility = View.GONE
+
+            binding.movementLayout.visibility = View.GONE
+            binding.actionsAndMovement.visibility = View.GONE
+            binding.movementLayout2.visibility = View.GONE
+            binding.movementLayout3.visibility = View.GONE
+            binding.dividerViewView.visibility = View.GONE
+            binding.dividerViewView2.visibility = View.GONE
+            binding.dividerViewView3.visibility = View.GONE
         }
         myActives.setOnClickListener {
             binding.buttonFrame.visibility = View.VISIBLE
@@ -63,6 +78,14 @@ class WalletFragment : Fragment() {
             binding.cardLayout.visibility = View.GONE
             binding.actionButtons.visibility = View.GONE
             binding.textButtons.visibility = View.GONE
+
+            binding.movementLayout.visibility = View.GONE
+            binding.actionsAndMovement.visibility = View.GONE
+            binding.movementLayout2.visibility = View.GONE
+            binding.movementLayout3.visibility = View.GONE
+            binding.dividerViewView.visibility = View.GONE
+            binding.dividerViewView2.visibility = View.GONE
+            binding.dividerViewView3.visibility = View.GONE
         }
         movements.setOnClickListener {
             binding.dot3.visibility = View.VISIBLE
@@ -75,6 +98,17 @@ class WalletFragment : Fragment() {
             binding.textButtons.visibility = View.GONE
             binding.buttonFrame.visibility = View.GONE
             binding.cryptoItems.visibility = View.GONE
+            //propio de esta vista
+            binding.movementLayout.visibility = View.VISIBLE
+            binding.actionsAndMovement.visibility = View.VISIBLE
+            binding.movementLayout2.visibility = View.VISIBLE
+            binding.movementLayout3.visibility = View.VISIBLE
+            binding.dividerViewView.visibility = View.VISIBLE
+            binding.dividerViewView2.visibility = View.VISIBLE
+            binding.dividerViewView3.visibility = View.VISIBLE
+
+
+
         }
     }
 

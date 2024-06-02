@@ -865,6 +865,407 @@
             android:text="@string/view_more" />
 
     </LinearLayout>
+    <!--   Diseño para sección Movimientos-->
+
+    <LinearLayout
+        android:id="@+id/actionsAndMovement"
+        app:layout_constraintTop_toBottomOf="@+id/myWallet"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+
+        <TextView
+            android:id="@+id/action"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="100dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Acción"
+            android:textColor="@color/hint_tex"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/quantity"
+            android:textAlignment="center"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Cantidad"
+            android:textColor="@color/hint_tex"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/movementLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dateMovement"
+                android:textAlignment="center"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="2 ene 2024"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateActionLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Rodrigo Alonso"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/typeOfTransaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="8sp"
+                android:textColor="@color/colorPrimaryButton"
+                android:layout_gravity="end"
+                android:text="Transferencia"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateQuantityAmountLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="-3,210"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/currencyLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="USDT"
+                android:textColor="@color/colorPrimaryButton"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_view_view"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="1dp"
+        android:layout_marginTop="350dp"
+        android:visibility="gone"
+        android:background="@color/divider_frame" />
+
+    <LinearLayout
+        android:id="@+id/movementLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dateMovement2"
+                android:textAlignment="center"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="2 ene 2024"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateActionLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Rodrigo Alonso"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/typeOfTransaction2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="8sp"
+                android:textColor="@color/colorPrimaryButton"
+                android:layout_gravity="end"
+                android:text="Transferencia"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateQuantityLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="-3,210"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/currencyLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="USDT"
+                android:textColor="@color/colorPrimaryButton"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_view_view2"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="30dp"
+        android:visibility="gone"
+        android:layout_marginStart="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="1dp"
+        android:layout_marginTop="420dp"
+        android:background="@color/divider_frame" />
+
+    <LinearLayout
+        android:id="@+id/movementLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dateMovement3"
+                android:textAlignment="center"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="2 ene 2024"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateActionLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Rodrigo Alonso"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/typeOfTransaction3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="8sp"
+                android:textColor="@color/colorPrimaryButton"
+                android:layout_gravity="end"
+                android:text="Transferencia"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateQuantityLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="-3,210"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/currencyLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="USDT"
+                android:textColor="@color/colorPrimaryButton"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_view_view3"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="1dp"
+        android:layout_marginTop="490dp"
+        android:background="@color/divider_frame" />
 
 
 </FrameLayout>

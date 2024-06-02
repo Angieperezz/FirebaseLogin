@@ -72,6 +72,8 @@ class WalletFragment : Fragment() {
             binding.dividerViewView.visibility = View.GONE
             binding.dividerViewView2.visibility = View.GONE
             binding.dividerViewView3.visibility = View.GONE
+            binding.frameNFT.visibility = View.GONE
+
         }
         myActives.setOnClickListener {
             binding.buttonFrame.visibility = View.VISIBLE
@@ -119,8 +121,7 @@ class WalletFragment : Fragment() {
             binding.dividerViewView.visibility = View.VISIBLE
             binding.dividerViewView2.visibility = View.VISIBLE
             binding.dividerViewView3.visibility = View.VISIBLE
-
-
+            binding.frameNFT.visibility = View.GONE
 
         }
 

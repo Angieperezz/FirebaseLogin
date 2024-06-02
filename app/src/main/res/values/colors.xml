@@ -32,6 +32,7 @@
     <color name="divider_frame">#D9D9D9</color>
     <color name="outline">#39424E</color>
     <color name="hint_tex">#969696</color>
+    <color name="green_text">#42B613</color>
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/primary
     </color>

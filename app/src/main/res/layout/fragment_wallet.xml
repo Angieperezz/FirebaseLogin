@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.dashboard.WalletFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp">
 
         <com.google.android.material.button.MaterialButton
@@ -53,31 +53,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            app:layout_constraintTop_toBottomOf="@+id/iconPerson"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/my_wallet_title"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconPerson"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <LinearLayout
             android:id="@+id/buttonBarLayout"
-            app:layout_constraintTop_toBottomOf="@+id/myWallet"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myWallet">
 
             <com.google.android.material.button.MaterialButton
-                style="@style/SecondaryButton"
                 android:id="@+id/actions"
+                style="@style/SecondaryButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/actions"
                 android:textColor="@color/black"
@@ -87,8 +87,8 @@
                 android:id="@+id/divider"
                 android:layout_width="1dp"
                 android:layout_height="28dp"
-                android:layout_marginTop="15dp"
                 android:layout_gravity="bottom"
+                android:layout_marginTop="15dp"
                 android:background="@color/divider_frame" />
 
             <com.google.android.material.button.MaterialButton
@@ -96,9 +96,9 @@
                 style="@style/SecondaryButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/my_actives"
                 android:textColor="@color/black"
@@ -108,8 +108,8 @@
                 android:id="@+id/divider2"
                 android:layout_width="1dp"
                 android:layout_height="28dp"
-                android:layout_marginTop="15dp"
                 android:layout_gravity="bottom"
+                android:layout_marginTop="15dp"
                 android:background="@color/divider_frame" />
 
             <com.google.android.material.button.MaterialButton
@@ -117,9 +117,9 @@
                 style="@style/SecondaryButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/movements"
                 android:textColor="@color/black"
@@ -129,41 +129,41 @@
 
         <LinearLayout
             android:id="@+id/dotSpace"
-            app:layout_constraintTop_toBottomOf="@+id/buttonBarLayout"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonBarLayout">
 
             <ImageView
                 android:id="@+id/dot1"
                 android:layout_width="0dp"
                 android:layout_height="10dp"
-                android:src="@drawable/dot_active"
                 android:layout_weight="1"
+                android:src="@drawable/dot_active"
                 app:layout_constraintEnd_toStartOf="@id/dot2" />
 
             <ImageView
                 android:id="@+id/dot2"
                 android:layout_width="0dp"
                 android:layout_height="10dp"
-                android:visibility="invisible"
-                android:src="@drawable/dot_active"
                 android:layout_marginStart="10dp"
                 android:layout_weight="1"
+                android:src="@drawable/dot_active"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@id/dot3"
                 app:layout_constraintStart_toEndOf="@id/dot1" />
 
             <ImageView
                 android:id="@+id/dot3"
                 android:layout_width="0dp"
-                android:visibility="invisible"
                 android:layout_height="10dp"
-                android:src="@drawable/dot_active"
                 android:layout_marginStart="10dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:src="@drawable/dot_active"
+                android:visibility="invisible" />
 
         </LinearLayout>
 
@@ -172,13 +172,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/containerView"
-        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="250dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/container_view_without_color">
+        android:background="@drawable/container_view_without_color"
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/text_balance"
@@ -199,18 +199,18 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="21dp"
             android:layout_marginTop="10dp"
-            android:textColor="@color/black"
             android:fontFamily="@font/poppins_semi_bold"
             android:text="$16,900USD = 20,000 MXN"
+            android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_balance" />
 
         <LinearLayout
             android:layout_width="145dp"
-            android:layout_marginTop="15dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/amountTextView">
@@ -223,23 +223,23 @@
 
     <HorizontalScrollView
         android:id="@+id/frameValues"
-        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="380dp"
         android:layout_marginEnd="30dp"
         android:fillViewport="true"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/containerView">
 
         <LinearLayout
             android:id="@+id/cardLayout"
-            android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/primary"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="visible">
 
             <LinearLayout
                 android:id="@+id/card_euros"
@@ -379,62 +379,62 @@
 
     <LinearLayout
         android:id="@+id/actionButtons"
-        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
         android:layout_marginTop="510dp"
-        android:orientation="horizontal">
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_gravity="center"
-        android:src="@drawable/solicitude" />
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/solicitude" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
             android:src="@drawable/send" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:src="@drawable/buy" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:src="@drawable/sell" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/textButtons"
-        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
         android:layout_marginTop="550dp"
-        android:orientation="horizontal">
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/solicitude"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginTop="26dp"
-            android:gravity="center"
+            android:layout_weight="1"
             android:fontFamily="@font/poppins_light"
+            android:gravity="center"
             android:text="@string/solicit_text"
             android:textColor="@color/black"
             android:textSize="11sp" />
@@ -443,10 +443,10 @@
             android:id="@+id/send"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginTop="26dp"
-            android:gravity="center"
+            android:layout_weight="1"
             android:fontFamily="@font/poppins_light"
+            android:gravity="center"
             android:text="@string/send_text"
             android:textColor="@color/black"
             android:textSize="11sp" />
@@ -455,10 +455,10 @@
             android:id="@+id/buy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
             android:layout_marginTop="26dp"
+            android:layout_weight="1"
             android:fontFamily="@font/poppins_light"
+            android:gravity="center"
             android:text="@string/buy_button"
             android:textColor="@color/black"
             android:textSize="11sp" />
@@ -467,73 +467,129 @@
             android:id="@+id/sell"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginTop="26dp"
-            android:gravity="center"
+            android:layout_weight="1"
             android:fontFamily="@font/poppins_light"
+            android:gravity="center"
             android:text="@string/sell_button"
             android:textColor="@color/black"
             android:textSize="11sp" />
 
     </LinearLayout>
 
-<!--   Diseño para sección Mis activos-->
+    <!--   Diseño para sección Mis activos-->
 
 
     <LinearLayout
         android:id="@+id/buttonFrame"
         android:layout_width="match_parent"
-        android:layout_marginTop="270dp"
-        android:visibility="gone"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="270dp"
         android:layout_marginEnd="30dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
             style="@style/PrimaryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
             android:background="@drawable/border_background"
             android:fontFamily="@font/poppins_semi_bold"
             android:gravity="center_vertical"
             android:text="Tokens"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/amountTextVie"
-            android:background="@drawable/border_background"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="40dp"
+            android:background="@drawable/border_background"
             android:fontFamily="@font/poppins_semi_bold"
             android:text="@string/nfts_title"
-            android:textColor="@color/black"
-            android:textSize="14sp"
             android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/cryptoItems"
+        android:id="@+id/itemDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
         android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myWallet">
+
+
+        <TextView
+            android:id="@+id/available"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="26dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:text="Disponible"
+            android:textAlignment="center"
+            android:textColor="@color/hint_tex"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="26dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:text="Costo"
+            android:textAlignment="center"
+            android:textColor="@color/hint_tex"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/market"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="26dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:text="Mercado"
+            android:textAlignment="center"
+            android:textColor="@color/hint_tex"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/cryptoItems"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="360dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/border_background"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -543,91 +599,9 @@
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_marginTop="5dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="10dp"
-                android:src="@drawable/ic_matic" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/matic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="@string/matic_title"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/amountHint"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/matic_title"
-                    android:textColor="@color/black"
-                    android:textSize="9sp" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
-                android:layout_marginTop="3dp"
-                android:gravity="end"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/maticAmount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:text="@string/amount_pesos"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/amountHintMatic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/amount_hint_dollars"
-                    android:textColor="@color/black"
-                    android:textSize="9sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-
-        <View
-            android:id="@+id/divider_view1"
-            android:layout_width="300dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/divider_frame" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
                 android:layout_marginTop="5dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp"
-                android:contentDescription="TODO"
                 android:src="@drawable/ic_usdt" />
 
             <LinearLayout
@@ -640,59 +614,61 @@
                     android:id="@+id/usdt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="23dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/usdt_title"
+                    android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/amountUSDT"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Tether"
-                    android:textColor="@color/black"
-                    android:textSize="9sp" />
 
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/availableAmountUSDT"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="$1.00"
+                android:textColor="@color/colorPrimaryButton"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/costAmountUSDT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="30dp"
-                android:layout_marginTop="3dp"
-                android:gravity="end"
-                android:orientation="vertical">
+                android:fontFamily="@font/poppins_light"
+                android:text="$1.02"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/usdtAmount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:text="@string/amount_pesos"
-                    android:textSize="13sp" />
+            <TextView
+                android:id="@+id/marketPercentUSDT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="10.91%"
+                android:textColor="@color/green_text"
+                android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/amountHintUsdt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/amount_hint_dollars"
-                    android:textColor="@color/black"
-                    android:textSize="9sp" />
 
-            </LinearLayout>
         </LinearLayout>
 
+
         <View
-            android:id="@+id/divider_view2"
+            android:id="@+id/divider_view1"
             android:layout_width="300dp"
-            android:layout_gravity="center_horizontal"
             android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@color/divider_frame" />
 
@@ -704,9 +680,9 @@
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_marginTop="5dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
                 android:contentDescription="TODO"
                 android:src="@drawable/ic_wbtc" />
 
@@ -720,59 +696,56 @@
                     android:id="@+id/wbtc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="23dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/wbtc_title"
+                    android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/amountWBTC"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/bitcoin_title"
-                    android:textColor="@color/black"
-                    android:textSize="9sp" />
-
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/availableAmountWBTC"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
-                android:layout_marginTop="3dp"
-                android:gravity="end"
-                android:orientation="vertical">
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="$1.00"
+                android:textColor="@color/colorPrimaryButton"
+                android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/wbtcAmount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:text="@string/amount_pesos"
-                    android:textSize="13sp" />
+            <TextView
+                android:id="@+id/costAmountWBTC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="$34,200.02"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/amountHintWbtc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/amount_hint_dollars"
-                    android:textColor="@color/black"
-                    android:textSize="9sp" />
-
-            </LinearLayout>
+            <TextView
+                android:id="@+id/marketPercentWBTC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="-3.91%"
+                android:textColor="@color/error"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <View
-            android:id="@+id/divider_view3"
+            android:id="@+id/divider_view2"
             android:layout_width="300dp"
-            android:layout_gravity="center_horizontal"
             android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@color/divider_frame" />
 
@@ -784,9 +757,9 @@
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_marginTop="5dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
                 android:contentDescription="TODO"
                 android:src="@drawable/ic_eth" />
 
@@ -800,112 +773,191 @@
                     android:id="@+id/eth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="23dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/eth_title"
+                    android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/amountEth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/ethereum_title"
-                    android:textColor="@color/black"
-                    android:textSize="9sp" />
 
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
+
+            <TextView
+                android:id="@+id/availableAmountETH"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="$1.00"
+                android:textColor="@color/colorPrimaryButton"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/costAmountETH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="30dp"
-                android:layout_marginTop="3dp"
-                android:gravity="end"
-                android:orientation="vertical">
+                android:fontFamily="@font/poppins_light"
+                android:text="$2400.02"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/ethAmount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:text="@string/amount_pesos"
-                    android:textSize="13sp" />
+            <TextView
+                android:id="@+id/marketPercentETH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="7.91%"
+                android:textColor="@color/green_text"
+                android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/amountHintEth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/amount_hint_dollars"
-                    android:textColor="@color/black"
-                    android:textSize="9sp" />
-
-            </LinearLayout>
         </LinearLayout>
 
         <View
-            android:id="@+id/divider_view4"
+            android:id="@+id/divider_view3"
             android:layout_width="300dp"
-            android:layout_gravity="center_horizontal"
             android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@color/divider_frame" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLogin"
-            style="@style/SecondaryButton"
-            android:layout_width="235dp"
-            android:layout_height="44dp"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/view_more" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/ic_matic" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/matic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/matic_title"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/availableAmountMatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="$1.00"
+                android:textColor="@color/colorPrimaryButton"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/costAmountMatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="$1.00"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/marketPercentMatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="2.90%"
+                android:textColor="@color/green_text"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!--        <View-->
+        <!--            android:id="@+id/divider_view4"-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_gravity="center_horizontal"-->
+        <!--            android:layout_height="1dp"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:background="@color/divider_frame" />-->
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/btnLogin"-->
+        <!--            style="@style/SecondaryButton"-->
+        <!--            android:layout_width="235dp"-->
+        <!--            android:layout_height="44dp"-->
+        <!--            android:layout_gravity="center_horizontal"-->
+        <!--            android:text="@string/view_more" />-->
 
     </LinearLayout>
     <!--   Diseño para sección Movimientos-->
 
     <LinearLayout
         android:id="@+id/actionsAndMovement"
-        app:layout_constraintTop_toBottomOf="@+id/myWallet"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="30dp"
         android:orientation="horizontal"
-        android:visibility="gone">
-
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myWallet">
 
 
         <TextView
             android:id="@+id/action"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:textAlignment="center"
-            android:layout_weight="1"
             android:layout_gravity="center"
-            android:layout_marginTop="26dp"
             android:layout_marginStart="100dp"
+            android:layout_marginTop="26dp"
+            android:layout_weight="1"
             android:fontFamily="@font/poppins_light"
             android:text="Acción"
+            android:textAlignment="center"
             android:textColor="@color/hint_tex"
             android:textSize="12sp" />
 
 
         <TextView
             android:id="@+id/quantity"
-            android:textAlignment="center"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_marginTop="26dp"
+            android:layout_weight="1"
             android:fontFamily="@font/poppins_light"
             android:text="Cantidad"
+            android:textAlignment="center"
             android:textColor="@color/hint_tex"
             android:textSize="12sp" />
 
@@ -916,12 +968,11 @@
         android:id="@+id/movementLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="280dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="280dp"
         android:layout_marginEnd="30dp"
-        android:visibility="gone"
-        android:orientation="horizontal">
-
+        android:orientation="horizontal"
+        android:visibility="gone">
 
 
         <LinearLayout
@@ -931,14 +982,14 @@
 
             <TextView
                 android:id="@+id/dateMovement"
-                android:textAlignment="center"
                 android:layout_width="100dp"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_light"
                 android:text="2 ene 2024"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
@@ -953,14 +1004,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_regular"
                 android:text="Rodrigo Alonso"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
@@ -968,11 +1019,11 @@
                 android:id="@+id/typeOfTransaction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_light"
-                android:textSize="8sp"
-                android:textColor="@color/colorPrimaryButton"
                 android:layout_gravity="end"
-                android:text="Transferencia"/>
+                android:fontFamily="@font/poppins_light"
+                android:text="Transferencia"
+                android:textColor="@color/colorPrimaryButton"
+                android:textSize="8sp" />
 
         </LinearLayout>
 
@@ -984,13 +1035,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_light"
                 android:text="-3,210"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
@@ -1004,14 +1055,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_light"
                 android:text="USDT"
+                android:textAlignment="center"
                 android:textColor="@color/colorPrimaryButton"
                 android:textSize="13sp" />
 
@@ -1022,24 +1073,23 @@
     <View
         android:id="@+id/divider_view_view"
         android:layout_width="match_parent"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_gravity="center_horizontal"
         android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="350dp"
-        android:visibility="gone"
-        android:background="@color/divider_frame" />
+        android:layout_marginEnd="30dp"
+        android:background="@color/divider_frame"
+        android:visibility="gone" />
 
     <LinearLayout
         android:id="@+id/movementLayout2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="350dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="350dp"
         android:layout_marginEnd="30dp"
         android:orientation="horizontal"
         android:visibility="gone">
-
 
 
         <LinearLayout
@@ -1049,14 +1099,14 @@
 
             <TextView
                 android:id="@+id/dateMovement2"
-                android:textAlignment="center"
                 android:layout_width="100dp"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_light"
                 android:text="2 ene 2024"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
@@ -1071,25 +1121,26 @@
             android:orientation="vertical">
 
             <TextView
-                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_regular"
                 android:text="Rodrigo Alonso"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
+
             <TextView
                 android:id="@+id/typeOfTransaction2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_light"
-                android:textSize="8sp"
-                android:textColor="@color/colorPrimaryButton"
                 android:layout_gravity="end"
-                android:text="Transferencia"/>
+                android:fontFamily="@font/poppins_light"
+                android:text="Transferencia"
+                android:textColor="@color/colorPrimaryButton"
+                android:textSize="8sp" />
 
         </LinearLayout>
 
@@ -1101,14 +1152,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_light"
                 android:text="-3,210"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
@@ -1122,14 +1173,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_light"
                 android:text="USDT"
+                android:textAlignment="center"
                 android:textColor="@color/colorPrimaryButton"
                 android:textSize="13sp" />
 
@@ -1140,24 +1191,23 @@
     <View
         android:id="@+id/divider_view_view2"
         android:layout_width="match_parent"
-        android:layout_marginEnd="30dp"
-        android:visibility="gone"
-        android:layout_marginStart="30dp"
-        android:layout_gravity="center_horizontal"
         android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="420dp"
-        android:background="@color/divider_frame" />
+        android:layout_marginEnd="30dp"
+        android:background="@color/divider_frame"
+        android:visibility="gone" />
 
     <LinearLayout
         android:id="@+id/movementLayout3"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="420dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="420dp"
         android:layout_marginEnd="30dp"
         android:orientation="horizontal"
         android:visibility="gone">
-
 
 
         <LinearLayout
@@ -1167,14 +1217,14 @@
 
             <TextView
                 android:id="@+id/dateMovement3"
-                android:textAlignment="center"
                 android:layout_width="100dp"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_light"
                 android:text="2 ene 2024"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
@@ -1189,14 +1239,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_regular"
                 android:text="Rodrigo Alonso"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
@@ -1204,11 +1254,11 @@
                 android:id="@+id/typeOfTransaction3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_light"
-                android:textSize="8sp"
-                android:textColor="@color/colorPrimaryButton"
                 android:layout_gravity="end"
-                android:text="Transferencia"/>
+                android:fontFamily="@font/poppins_light"
+                android:text="Transferencia"
+                android:textColor="@color/colorPrimaryButton"
+                android:textSize="8sp" />
 
         </LinearLayout>
 
@@ -1220,14 +1270,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_light"
                 android:text="-3,210"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
@@ -1241,14 +1291,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="26dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_light"
                 android:text="USDT"
+                android:textAlignment="center"
                 android:textColor="@color/colorPrimaryButton"
                 android:textSize="13sp" />
 
@@ -1258,14 +1308,14 @@
 
     <View
         android:id="@+id/divider_view_view3"
-        android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_gravity="center_horizontal"
         android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="490dp"
-        android:background="@color/divider_frame" />
+        android:layout_marginEnd="30dp"
+        android:background="@color/divider_frame"
+        android:visibility="gone" />
 
 
 </FrameLayout>

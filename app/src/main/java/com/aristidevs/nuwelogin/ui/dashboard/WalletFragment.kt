@@ -48,17 +48,20 @@ class WalletFragment : Fragment() {
 
     private fun initListeners() {
         actions.setOnClickListener {
+            //propio de esta vista
             binding.dot1.visibility = View.VISIBLE
             binding.containerView.visibility = View.VISIBLE
             binding.frameValues.visibility = View.VISIBLE
             binding.cardLayout.visibility = View.VISIBLE
             binding.actionButtons.visibility = View.VISIBLE
             binding.textButtons.visibility = View.VISIBLE
+
+            //Oculta otras vistas
             binding.dot3.visibility = View.INVISIBLE
             binding.dot2.visibility = View.INVISIBLE
             binding.buttonFrame.visibility = View.GONE
             binding.cryptoItems.visibility = View.GONE
-
+            binding.itemDescription.visibility = View.GONE
             binding.movementLayout.visibility = View.GONE
             binding.actionsAndMovement.visibility = View.GONE
             binding.movementLayout2.visibility = View.GONE
@@ -71,6 +74,9 @@ class WalletFragment : Fragment() {
             binding.buttonFrame.visibility = View.VISIBLE
             binding.cryptoItems.visibility = View.VISIBLE
             binding.dot2.visibility = View.VISIBLE
+            binding.itemDescription.visibility = View.VISIBLE
+
+
             binding.dot1.visibility = View.INVISIBLE
             binding.dot3.visibility = View.INVISIBLE
             binding.containerView.visibility = View.GONE
@@ -91,6 +97,7 @@ class WalletFragment : Fragment() {
             binding.dot3.visibility = View.VISIBLE
             binding.dot1.visibility = View.INVISIBLE
             binding.dot2.visibility = View.INVISIBLE
+            binding.itemDescription.visibility = View.GONE
             binding.containerView.visibility = View.GONE
             binding.frameValues.visibility = View.GONE
             binding.cardLayout.visibility = View.GONE

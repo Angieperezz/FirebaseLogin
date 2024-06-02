@@ -56,6 +56,8 @@ class WalletFragment : Fragment() {
             binding.cardLayout.visibility = View.VISIBLE
             binding.actionButtons.visibility = View.VISIBLE
             binding.textButtons.visibility = View.VISIBLE
+            binding.divider.visibility = View.VISIBLE
+            binding.divider2.visibility = View.VISIBLE
 
             //Oculta otras vistas
             binding.dot3.visibility = View.INVISIBLE
@@ -77,7 +79,8 @@ class WalletFragment : Fragment() {
             binding.dot2.visibility = View.VISIBLE
             binding.itemDescription.visibility = View.VISIBLE
 
-
+            binding.divider.visibility = View.GONE
+            binding.divider2.visibility = View.GONE
             binding.dot1.visibility = View.INVISIBLE
             binding.dot3.visibility = View.INVISIBLE
             binding.containerView.visibility = View.GONE
@@ -98,6 +101,8 @@ class WalletFragment : Fragment() {
             binding.dot3.visibility = View.VISIBLE
             binding.dot1.visibility = View.INVISIBLE
             binding.dot2.visibility = View.INVISIBLE
+            binding.divider.visibility = View.GONE
+            binding.divider2.visibility = View.GONE
             binding.itemDescription.visibility = View.GONE
             binding.containerView.visibility = View.GONE
             binding.frameValues.visibility = View.GONE
@@ -130,6 +135,9 @@ class WalletFragment : Fragment() {
                 nftButton.backgroundTintList = ColorStateList.valueOf(getResources().getColor(R.color.colorPrimaryButton))
 
             }
+
+            binding.cryptoItems.visibility = View.GONE
+            binding.itemDescription.visibility = View.GONE
         }
 
         tokenBtn.setOnClickListener {
@@ -143,6 +151,8 @@ class WalletFragment : Fragment() {
                 it.backgroundTintList = ColorStateList.valueOf(getResources().getColor(R.color.colorPrimaryButton))
 
             }
+            binding.cryptoItems.visibility = View.VISIBLE
+            binding.itemDescription.visibility = View.VISIBLE
         }
     }
 

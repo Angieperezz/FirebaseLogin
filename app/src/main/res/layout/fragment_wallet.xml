@@ -523,6 +523,93 @@
 
     </LinearLayout>
 
+    <!--   Diseño para mis activos -nft -->
+
+    <LinearLayout
+        android:id="@+id/frameNFT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="100dp"
+        android:visibility="gone"
+        android:background="@drawable/border_container_light_969696"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="300dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="30dp"
+            app:cardCornerRadius="46dp"
+            android:elevation="15dp"
+            android:background="@drawable/main_img_wallet"
+            app:layoutManager="androidx.viewpager.widget.ViewPager"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/frameHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp">
+
+            <TextView
+                android:id="@+id/nameOfAparment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="2dp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Apartamento en Cancún"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:id="@+id/buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="70dp"
+                    style="@style/SecondaryButton"
+                    android:layout_marginStart="2dp"
+                    android:layout_height="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="6sp"
+                    app:strokeColor="@color/hint_tex"
+                    app:strokeWidth="0.2dp"
+                    app:cornerRadius="20dp"
+                    android:text="Fractional"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="73dp"
+                    style="@style/SecondaryButton"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_height="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="6sp"
+                    app:strokeColor="@color/hint_tex"
+                    app:strokeWidth="0.2dp"
+                    app:cornerRadius="20dp"
+                    android:text="Reservation"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--   Diseño para mis activos -token -->
+
     <LinearLayout
         android:id="@+id/itemDescription"
         android:layout_width="match_parent"
@@ -901,23 +988,8 @@
 
         </LinearLayout>
 
-        <!--        <View-->
-        <!--            android:id="@+id/divider_view4"-->
-        <!--            android:layout_width="300dp"-->
-        <!--            android:layout_gravity="center_horizontal"-->
-        <!--            android:layout_height="1dp"-->
-        <!--            android:layout_marginTop="10dp"-->
-        <!--            android:background="@color/divider_frame" />-->
-
-        <!--        <com.google.android.material.button.MaterialButton-->
-        <!--            android:id="@+id/btnLogin"-->
-        <!--            style="@style/SecondaryButton"-->
-        <!--            android:layout_width="235dp"-->
-        <!--            android:layout_height="44dp"-->
-        <!--            android:layout_gravity="center_horizontal"-->
-        <!--            android:text="@string/view_more" />-->
-
     </LinearLayout>
+
     <!--   Diseño para sección Movimientos-->
 
     <LinearLayout

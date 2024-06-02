@@ -133,9 +133,8 @@ class WalletFragment : Fragment() {
             nftButton?.let {
                 it.setTextColor(getResources().getColor(R.color.primary))
                 nftButton.backgroundTintList = ColorStateList.valueOf(getResources().getColor(R.color.colorPrimaryButton))
-
             }
-
+            binding.frameNFT.visibility = View.VISIBLE
             binding.cryptoItems.visibility = View.GONE
             binding.itemDescription.visibility = View.GONE
         }
@@ -151,6 +150,7 @@ class WalletFragment : Fragment() {
                 it.backgroundTintList = ColorStateList.valueOf(getResources().getColor(R.color.colorPrimaryButton))
 
             }
+            binding.frameNFT.visibility = View.GONE
             binding.cryptoItems.visibility = View.VISIBLE
             binding.itemDescription.visibility = View.VISIBLE
         }

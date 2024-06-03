@@ -106,4 +106,7 @@
     <string name="total_balance">Balance total</string>
     <string name="send_text">Enviar</string>
     <string name="solicit_text">Solicita</string>
+    <string name="receive_crypto">Recibe criptomonedas</string>
+    <string name="select_type_of_crypto">Selecciona el tipo de moneda a recibir:</string>
+    <string name="accepTermsAndConditionsText">*La compraventa de criptomonedas es liquidada por Binkio Pay, al operar das tu consentimiento en base a los terminos de uso</string>
 </resources>

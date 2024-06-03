@@ -1,15 +1,19 @@
 package com.aristidevs.nuwelogin.ui.dashboard
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.HorizontalScrollView
+import androidx.appcompat.widget.AppCompatImageButton
 import androidx.fragment.app.Fragment
 import com.aristidevs.nuwelogin.R
 import com.aristidevs.nuwelogin.databinding.FragmentWalletBinding
+import com.aristidevs.nuwelogin.ui.signin.ActivityMoralOrPhysicPerson
 import com.google.android.material.button.MaterialButton
+import dagger.hilt.android.qualifiers.ApplicationContext
 
 class WalletFragment : Fragment() {
 
@@ -21,6 +25,7 @@ class WalletFragment : Fragment() {
         private lateinit var movements: MaterialButton
         private lateinit var tokenBtn: MaterialButton
         private lateinit var nftButton: MaterialButton
+        private lateinit var solicitButton: AppCompatImageButton
 
 
 
@@ -39,6 +44,7 @@ class WalletFragment : Fragment() {
         movements = binding.movements.findViewById(R.id.movements)
         tokenBtn = binding.tokenButton.findViewById(R.id.tokenButton)
         nftButton = binding.nftButton.findViewById(R.id.nftButton)
+        solicitButton = binding.solicitButton.findViewById(R.id.solicitButton)
 
         initListeners()
 
@@ -155,8 +161,11 @@ class WalletFragment : Fragment() {
             binding.cryptoItems.visibility = View.VISIBLE
             binding.itemDescription.visibility = View.VISIBLE
         }
+
+        solicitButton.setOnClickListener {
+            val intent = Intent(activity?.applicationContext, TransactionActivity::class.java)
+            startActivity(intent)
+        }
     }
-
-
 
 }

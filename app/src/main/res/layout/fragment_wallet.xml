@@ -389,30 +389,35 @@
         android:orientation="horizontal"
         android:visibility="visible">
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/solicitButton"
             android:layout_width="0dp"
+            android:background="@color/primary"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:src="@drawable/solicitude" />
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageButton
             android:layout_width="0dp"
+            android:background="@color/primary"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:src="@drawable/send" />
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageButton
             android:layout_width="0dp"
+            android:background="@color/primary"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:src="@drawable/buy" />
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@color/primary"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:src="@drawable/sell" />

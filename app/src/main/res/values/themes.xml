@@ -102,6 +102,18 @@
         <item name="backgroundTint">@color/secondary_light_60</item>
     </style>
 
+    <style name="typeCurrencyButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@drawable/button_background_round</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textColor">@color/paper</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="backgroundTint">@color/primary</item>
+    </style>
+
     <style name="SecondaryButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="strokeColor">@color/primary</item>
         <item name="android:textSize">12sp</item>

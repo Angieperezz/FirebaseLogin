@@ -898,7 +898,12 @@
                 android:layout_marginTop="31dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginStart="30dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -918,9 +923,203 @@
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/go_to_marketplace"
                     android:textColor="@color/primary"
-                    android:layout_marginBottom="400dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="10sp" />
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="100dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="15dp">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/view_pager"
+                            android:layout_width="150dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="center_vertical"
+                            app:cardCornerRadius="46dp"
+                            android:elevation="15dp"
+                            android:background="@drawable/main_img_wallet"
+                            app:layoutManager="androidx.viewpager.widget.ViewPager"
+                            />
+                        <TextView
+                            android:id="@+id/aparmentName"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hubox Zapacatec"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/type"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/black_text"
+                                android:fontFamily="@font/poppins_light"
+                                android:textSize="10sp"
+                                android:layout_height="wrap_content"
+                                android:text="Tipo"/>
+
+                            <TextView
+                                android:id="@+id/rentability"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="65dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black_text"
+                                android:fontFamily="@font/poppins_light"
+                                android:textSize="10sp"
+                                android:text="Rentabilidad"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/typeAnswer"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="70dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/poppins_light"
+                                android:textColor="@color/black_text"
+                                android:textSize="9sp"
+                                android:background="@drawable/button_background_round"
+                                android:layout_height="wrap_content"
+                                android:text="Copropiedad"/>
+
+                            <TextView
+                                android:id="@+id/rentabilityAnswer"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="15dp"
+                                android:textColor="@color/black_text"
+
+                                android:textAlignment="center"
+                                android:layout_width="45dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_light"
+                                android:background="@drawable/button_background_round"
+                                android:textSize="9sp"
+                                android:text="12%"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/view_pager2"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="30dp"
+                        app:cardCornerRadius="46dp"
+                        android:elevation="15dp"
+                        android:background="@drawable/main_img_wallet"
+                        app:layoutManager="androidx.viewpager.widget.ViewPager"
+                        />
+                        <TextView
+                            android:id="@+id/aparmentName2"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginStart="30dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hubox Zapacatec"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="30dp">
+
+                            <TextView
+                                android:id="@+id/type2"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/black_text"
+                                android:fontFamily="@font/poppins_light"
+                                android:textSize="10sp"
+                                android:layout_height="wrap_content"
+                                android:text="Tipo"/>
+
+                            <TextView
+                                android:id="@+id/rentability2"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="65dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black_text"
+                                android:fontFamily="@font/poppins_light"
+                                android:textSize="10sp"
+                                android:text="Rentabilidad"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="30dp">
+
+                            <TextView
+                                android:id="@+id/typeAnswer2"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="70dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/poppins_light"
+                                android:textColor="@color/black_text"
+                                android:textSize="9sp"
+                                android:background="@drawable/button_background_round"
+                                android:layout_height="wrap_content"
+                                android:text="Copropiedad"/>
+
+                            <TextView
+                                android:id="@+id/rentabilityAnswer2"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="15dp"
+                                android:textColor="@color/black_text"
+
+                                android:textAlignment="center"
+                                android:layout_width="45dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_light"
+                                android:background="@drawable/button_background_round"
+                                android:textSize="9sp"
+                                android:text="12%"/>
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

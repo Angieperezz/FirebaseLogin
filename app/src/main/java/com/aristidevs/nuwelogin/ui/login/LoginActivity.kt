@@ -13,6 +13,7 @@ import com.aristidevs.nuwelogin.core.dialog.ErrorDialog
 import com.aristidevs.nuwelogin.core.dialog.LoginSuccessDialog
 import com.aristidevs.nuwelogin.core.ex.*
 import com.aristidevs.nuwelogin.databinding.ActivityLoginBinding
+import com.aristidevs.nuwelogin.ui.dashboard.DashboardActivity
 import com.aristidevs.nuwelogin.ui.login.model.UserLogin
 import com.aristidevs.nuwelogin.ui.resetPassword.ForgotPasswordActivity
 import com.aristidevs.nuwelogin.ui.signin.SignInActivity
@@ -171,7 +172,10 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goToDetail() {
-        LoginSuccessDialog.create().show(dialogLauncher, this)
+        //LoginSuccessDialog.create().show(dialogLauncher, this)
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
+
     }
 
     private fun goToVerify() {

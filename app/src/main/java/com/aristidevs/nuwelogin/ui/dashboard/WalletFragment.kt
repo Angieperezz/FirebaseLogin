@@ -26,6 +26,9 @@ class WalletFragment : Fragment() {
         private lateinit var tokenBtn: MaterialButton
         private lateinit var nftButton: MaterialButton
         private lateinit var solicitButton: AppCompatImageButton
+        private lateinit var sendButton: AppCompatImageButton
+        private lateinit var buyButton: AppCompatImageButton
+        private lateinit var sellButton: AppCompatImageButton
 
 
 
@@ -45,6 +48,9 @@ class WalletFragment : Fragment() {
         tokenBtn = binding.tokenButton.findViewById(R.id.tokenButton)
         nftButton = binding.nftButton.findViewById(R.id.nftButton)
         solicitButton = binding.solicitButton.findViewById(R.id.solicitButton)
+        sendButton = binding.sendButton.findViewById(R.id.sendButton)
+        buyButton = binding.buyButton.findViewById(R.id.buyButton)
+        sellButton = binding.sellButton.findViewById(R.id.sellButton)
 
         initListeners()
 
@@ -164,6 +170,11 @@ class WalletFragment : Fragment() {
 
         solicitButton.setOnClickListener {
             val intent = Intent(activity?.applicationContext, TransactionActivity::class.java)
+            startActivity(intent)
+        }
+
+        sendButton.setOnClickListener {
+            val intent = Intent(activity?.applicationContext, TransactionSendActivity::class.java)
             startActivity(intent)
         }
     }

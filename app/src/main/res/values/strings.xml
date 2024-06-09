@@ -107,11 +107,25 @@
     <string name="send_text">Enviar</string>
     <string name="solicit_text">Solicita</string>
     <string name="receive_crypto">Recibe criptomonedas</string>
+    <string name="send_crypto">Envia criptomonedas</string>
     <string name="select_type_of_crypto">Selecciona el tipo de moneda a recibir:</string>
+    <string name="select_type_of_crypto_to_send">Selecciona el activo a enviar: </string>
     <string name="receive_type_of_crypto">Tipo de moneda a recibir: </string>
     <string name="accepTermsAndConditionsText">*La compraventa de criptomonedas es liquidada por Binkio Pay, al operar das tu consentimiento en base a los terminos de uso</string>
     <string name="scan_qr">Escanea el siguiente código QR</string>
     <string name="copy_adress_binkio">Copia la dirección de tu cartera Binkio</string>
     <string name="only_red">Solo Red</string>
     <string name="polygon_text">Polygon</string>
+    <string name="active_to_send">Activo a enviar</string>
+    <string name="change_text">Cambiar</string>
+    <string name="amount_to_send">¿Cuánto desea enviar?</string>
+    <string name="address_text">Dirección</string>
+    <string name="red_title">Red</string>
+    <string name="write_direction_wallet">Escriba dirección de la wallet (Destinatario)</string>
+    <string name="only_polygon_avalaible">Solo Polygon (MATIC) disponible actualmente.</string>
+    <string name="icon">icon</string>
+    <string name="comision_text">Comisión de la red:</string>
+    <string name="comision">Comisión</string>
+    <string name="amount_comision">34$</string>
+    <string name="transfer">Transferencia</string>
 </resources>

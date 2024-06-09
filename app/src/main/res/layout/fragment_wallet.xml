@@ -399,6 +399,7 @@
             android:src="@drawable/solicitude" />
 
         <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/sendButton"
             android:layout_width="0dp"
             android:background="@color/primary"
             android:layout_height="wrap_content"
@@ -407,6 +408,7 @@
             android:src="@drawable/send" />
 
         <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buyButton"
             android:layout_width="0dp"
             android:background="@color/primary"
             android:layout_height="wrap_content"
@@ -415,6 +417,7 @@
             android:src="@drawable/buy" />
 
         <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/sellButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@color/primary"
@@ -1225,7 +1228,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:fontFamily="@font/poppins_light"
-                android:text="Transferencia"
+                android:text="@string/transfer"
                 android:textColor="@color/colorPrimaryButton"
                 android:textSize="8sp" />
 
@@ -1265,7 +1268,7 @@
                 android:layout_marginTop="26dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_light"
-                android:text="USDT"
+                android:text="@string/usdt_title"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimaryButton"
                 android:textSize="13sp" />

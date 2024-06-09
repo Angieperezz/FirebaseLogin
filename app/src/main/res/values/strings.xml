@@ -108,5 +108,10 @@
     <string name="solicit_text">Solicita</string>
     <string name="receive_crypto">Recibe criptomonedas</string>
     <string name="select_type_of_crypto">Selecciona el tipo de moneda a recibir:</string>
+    <string name="receive_type_of_crypto">Tipo de moneda a recibir: </string>
     <string name="accepTermsAndConditionsText">*La compraventa de criptomonedas es liquidada por Binkio Pay, al operar das tu consentimiento en base a los terminos de uso</string>
+    <string name="scan_qr">Escanea el siguiente código QR</string>
+    <string name="copy_adress_binkio">Copia la dirección de tu cartera Binkio</string>
+    <string name="only_red">Solo Red</string>
+    <string name="polygon_text">Polygon</string>
 </resources>

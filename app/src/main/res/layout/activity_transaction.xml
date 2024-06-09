@@ -115,7 +115,7 @@
             android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="invisible"/>
+            />
 
     </LinearLayout>
 
@@ -131,7 +131,7 @@
         android:textSize="12sp"
         android:text="@string/accepTermsAndConditionsText"
         android:fontFamily="@font/poppins_regular"
-        app:layout_constraintBottom_toTopOf="@+id/btnSendEmail"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutButton"/>
@@ -139,7 +139,7 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSendEmail"
+        android:id="@+id/btnNext"
         style="@style/PrimaryButton"
         android:layout_width="150dp"
         android:layout_height="44dp"
@@ -150,5 +150,191 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/accepTermsAndConditions" />
 
+
+<!--    A partir de aqui comienza la segunda pantalla-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layoutTypeToReceive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/layoutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/titleReceive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:text="@string/receive_type_of_crypto"
+        android:textColor="@color/black_text"
+        android:fontFamily="@font/poppins_regular"
+       />
+
+        <TextView
+            android:id="@+id/cryptoToReceive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:layout_marginStart="5dp"
+            android:text="@string/bitcoin_title"
+            android:textColor="@color/black_text"
+            android:fontFamily="@font/poppins_bold"
+            />
+
+        <ImageView
+            android:id="@+id/iconCrypto"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_wbtc"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/qrImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTypeToReceive"
+        android:src="@drawable/qr_code"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/scanQr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/qrImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="17sp"
+        android:textAlignment="center"
+        android:textColor="@color/black_text"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/scan_qr" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/dividerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/scanQr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+        <View
+            android:id="@+id/divider_view1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="@color/divider_frame"
+            />
+
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_light"
+            android:layout_weight="1"
+            android:text="O" />
+
+        <View
+            android:id="@+id/divider_view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="@color/divider_frame"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/copyAdress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/dividerLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/copy_adress_binkio" />
+
+    <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
+        android:id="@+id/btnCopy"
+        style="@style/PrimaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:text="0x34rGy6870Bfy..."
+        app:icon="@drawable/ic_copy"
+        app:iconGravity="textStart"
+        app:iconSize="24dp"
+        app:iconTint="@null"
+        app:iconPadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copyAdress" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/footerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnCopy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/onlyRedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="@string/only_red" />
+
+        <TextView
+            android:id="@+id/typeOfRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/colorPrimaryButton"
+            android:text="@string/polygon_text" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
